@@ -1,0 +1,25 @@
+{
+  "name": "test",
+  "version": "2.0.0",
+  "description": "",
+  "main": "serveur.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon serveur.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Giuseppemoi/Chat.git"
+  },
+  "author": "evrard",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Giuseppemoi/Chat/issues"
+  },
+  "homepage": "https://github.com/Giuseppemoi/Chat#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "nodemon": "^2.0.13",
+    "socket.io": "^4.2.0"
+  }
+}
