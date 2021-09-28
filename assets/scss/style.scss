@@ -1,0 +1,41 @@
+$colorBorder: #9B9B9B;
+$colorbackground: #608899;
+$colorDate: #9B9B9B;
+
+
+.accueil{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 1400px;
+    height: 800px;
+    border: 2px solid $colorBorder;
+    
+   
+
+.containerimage{
+    display: flex;
+    width: 25%;
+    opacity: 0.5;
+    background-color: $colorbackground;
+ img{
+    width: 350px;
+ }
+}
+.containerlogin{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    width: 75%;
+    background-color: $colorbackground;
+  
+.title{
+    display: flex;
+    font-size: 50px;
+    margin-top: 200px;
+    margin-bottom: 50px;
+    color: white;
+}
+}
+}
