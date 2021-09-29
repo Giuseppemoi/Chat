@@ -24,7 +24,7 @@
           flex-direction: row;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  width: 100%;
+  width: auto;
   height: 950px;
   border: 2px solid #9B9B9B;
   margin: 0;
@@ -170,5 +170,135 @@
 .body .accueil .register .button:hover {
   background-color: white;
   color: #608899;
+}
+
+@media screen and (max-width: 1100px) {
+  .body {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-line-pack: center;
+        align-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .body .accueil {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    background-color: #608899;
+    margin-left: 100px;
+  }
+  .body .accueil .containerimage {
+    position: absolute;
+    left: -800em;
+    background-color: none;
+    width: 0%;
+  }
+  .body .accueil .containerimage img {
+    display: none;
+    opacity: 0;
+    background-color: #608899;
+    width: 0%;
+  }
+  .body .accueil .containerlogin {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-line-pack: center;
+        align-content: center;
+    margin: 0;
+  }
+  .body .accueil .containerlogin .title {
+    font-size: 50px;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  .body .accueil .containerlogin .login {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: auto;
+  }
+  .body .accueil .containerlogin .login .usrnam {
+    height: 50px;
+    margin-top: 10px;
+  }
+  .body .accueil .containerlogin .login .mail {
+    height: 50px;
+    margin-top: 10px;
+    margin-left: 170px;
+  }
+  .body .accueil .containerlogin .login .send {
+    height: 50px;
+    margin-top: 10px;
+    margin-right: 30px;
+  }
+  .body .accueil .containerlogin .register {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: auto;
+    flex-direction: column;
+    margin-top: 30px;
+    margin-bottom: 50px;
+  }
+  .body .accueil .containerlogin .register .member {
+    margin-left: 20px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .body {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .accueil {
+    width: 500px;
+  }
+  .title {
+    font-size: 10px;
+  }
 }
 /*# sourceMappingURL=style.css.map */

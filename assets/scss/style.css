@@ -1,0 +1,28 @@
+body {
+  background-color: #608899;
+}
+
+#signup {
+  text-align: center;
+  background-color: white;
+  margin-left: 500px;
+  margin-right: 500px;
+  max-width: 100%;
+}
+
+#titre {
+  text-align: center;
+  color: white;
+}
+
+#signin {
+  background-color: #608899;
+  border-radius: 20ch;
+  margin-top: 10px;
+  color: white;
+}
+
+#name {
+  padding-top: 100px;
+}
+/*# sourceMappingURL=style.css.map */
