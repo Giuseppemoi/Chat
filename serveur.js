@@ -20,6 +20,9 @@ app.get("/",(req , res) =>{
 })
 
 io.on('connection', (socket) => {
+    Msg.find().then(result => {
+        socket.emit('output-messages', result);
+    })
     console.log('user connected');
     socket.on('disconnect', () => {
         console.log('user disconnect');

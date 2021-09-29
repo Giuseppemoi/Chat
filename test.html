@@ -34,6 +34,16 @@
           document.getElementById('messages').appendChild(li);
         }
         socket.on('chat message', recu);
+        socket.on('output-messages', data =>{
+          console.log(data)
+          if (data.length){
+            data.forEach(message => {
+          let li = document.createElement('li');
+          li.innerText = message.msg;
+          document.getElementById('messages').appendChild(li); 
+            });
+          }
+        });
     </script>
   </body>
 </html>
