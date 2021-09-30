@@ -11,5 +11,12 @@ let recu = function(msg){
     document.getElementById('messages').appendChild(li);
 }
 socket.on('chat message', recu);
-
-// abmyn0ERpP7vIJeJ
+socket.on('output-messages', data => {
+    if (data.length) {
+        data.forEach(message => {
+            let li = document.createElement('li');
+            li.innerText = message.msg;
+            document.getElementById('messages').appendChild(li);
+        })
+    }
+})
