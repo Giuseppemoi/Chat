@@ -1,9 +1,11 @@
-let app = require('express')();
+let express = require('express');
+let app = express()
 let http = require('http').Server(app);
 let io = require('socket.io')(http);
 const mongoose = require('mongoose')
 const Msg = require('./assets/model/msgSchema')
 const User = require('./assets/model/userSchema')
+app.use(express.static('assets'));
 
 const URI = "mongodb+srv://admin:abmyn0ERpP7vIJeJ@chat.mmksw.mongodb.net/messages?retryWrites=true&w=majority"
 const user = new User({name: 'coucou', email: 'sdhfbjdhb', password: 'hdbzjehvbdjzhebd'})
@@ -16,6 +18,10 @@ mongoose.connect(URI).then( () =>{
 })
 
 app.get("/",(req , res) =>{
+    res.sendFile(__dirname + '/index.html')
+})
+
+app.get("/connected",(req , res) =>{
     res.sendFile(__dirname + '/test.html')
 })
 
