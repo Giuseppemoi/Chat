@@ -310,6 +310,7 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  overflow: scroll;
   width: 80%;
   height: 100%;
   border: 2px solid #9B9B9B;
