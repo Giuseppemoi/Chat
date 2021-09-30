@@ -1,34 +1,28 @@
 const express = require("express");
-let app = express();
-let http = require('http').Server(app);
-let io = require('socket.io')(http);
-const mongoose = require('mongoose')
+const app = express();
+const http = require('http').Server(app);
+const io = require('socket.io')(http);
+// const mongoose = require('mongoose')
+
 const Msg = require('./assets/model/msgSchema')
 const User = require('./assets/model/userSchema')
 
+const router = require('./router')
+
+app.use(express.urlencoded({extended: false}))
+app.use(express.json())
+
+app.set('view engine', 'ejs')
+
 app.use(express.static('assets'));
 
-const URI = "mongodb+srv://admin:abmyn0ERpP7vIJeJ@chat.mmksw.mongodb.net/messages?retryWrites=true&w=majority"
+// const URI = "mongodb+srv://admin:abmyn0ERpP7vIJeJ@chat.mmksw.mongodb.net/messages?retryWrites=true&w=majority"
 
-mongoose.connect(URI).then( () =>{
-    console.log('connected')
-})
+// mongoose.connect(URI).then( () =>{
+//     console.log('connected')
+// })
 
-app.get("/",(req , res) =>{
-    res.sendFile(__dirname + '/index.html')
-})
-
-app.get("/register",(req , res) =>{
-    res.sendFile(__dirname + '/register.html')
-})
-
-app.post("/register",(req , res) =>{
-    console.log(req)
-})
-
-app.get("/chat",(req , res) =>{
-    res.sendFile(__dirname + '/messages.html')
-})
+app.use('/', router)
 
 io.on('connection', (socket) => {
     console.log('user connected');
@@ -49,7 +43,7 @@ io.on('connection', (socket) => {
         console.log('message recu  : ' + msg);
     })
 })
-
-http.listen(3000, () => {
-    console.log('connected')
-})
+module.exports = app
+// http.listen(3000, () => {
+//     console.log('connected')
+// })
