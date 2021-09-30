@@ -1,28 +1,519 @@
-body {
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+* .body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 0px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+* .body .accueil {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  width: auto;
+  height: 950px;
+  border: 2px solid #9B9B9B;
+  margin: 0;
+  padding: 0;
+}
+
+* .body .accueil .containerimage {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 30%;
+  opacity: 0.5;
   background-color: #608899;
 }
 
-#signup {
-  text-align: center;
+* .body .accueil .containerimage img {
+  width: 100%;
+}
+
+* .body .accueil .containerlogin {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 70%;
+  background-color: #608899;
+}
+
+* .body .accueil .containerlogin .title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 60px;
+  margin-top: 250px;
+  margin-bottom: 50px;
+  color: white;
+}
+
+* .body .accueil .containerlogin .login {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 80px;
+  margin-top: 50px;
+}
+
+* .body .accueil .containerlogin .login .usrnam {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 200px;
+  height: 40px;
+  border-radius: 10px;
+  margin-right: 30px;
+}
+
+* .body .accueil .containerlogin .login .mail {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 200px;
+  border-radius: 10px;
+  margin-right: 200px;
+}
+
+* .body .accueil .containerlogin .login .send {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100px;
+  border: 2px solid white;
+  border-radius: 10px;
+  background-color: #608899;
+  color: white;
+  font-weight: bold;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+* .body .accueil .containerlogin .login .send:hover {
   background-color: white;
-  margin-left: 500px;
-  margin-right: 500px;
-  max-width: 100%;
+  color: #608899;
 }
 
-h1 {
-  text-align: center;
+* .body .accueil .register {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 100px;
+}
+
+* .body .accueil .register .member {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 300px;
+  font-size: 30px;
+  margin-right: 40px;
   color: white;
 }
 
-#signin {
+* .body .accueil .register .button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100px;
+  height: 40px;
+  border: 2px solid white;
+  border-radius: 10px;
+  margin-top: 25px;
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+
+* .body .accueil .register .button:hover {
+  background-color: white;
+  color: #608899;
+}
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  height: 100%;
+  background-color: #9B9B9B;
+  padding: 20px;
+}
+
+.container .messages {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 100%;
+  height: 100%;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  border: 2px solid #608899;
+  border-radius: 10px;
+}
+
+.container .messages .containernames {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 15%;
+  height: 700px;
   background-color: #608899;
-  border-radius: 20ch;
-  margin-top: 10px;
-  color: white;
+  border: 2px solid #9B9B9B;
+  border-radius: 10px;
+  margin-left: 20px;
+  margin-right: 20px;
+  -webkit-box-shadow: 10px 5px 5px black;
+          box-shadow: 10px 5px 5px black;
 }
 
-#name {
-  padding-top: 100px;
+.container .messages .containernames .users {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: white;
+  border: 2px solid white;
+  border-radius: 10px;
+  width: 150px;
+  height: 50px;
+}
+
+.container .messages .containernames .senduser {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 250px;
+  height: 60px;
+  border: 2px solid white;
+  border-radius: 10px;
+  background-color: white;
+}
+
+.container .messages .avatar {
+  width: 50px;
+  border-radius: 50%;
+  margin-left: 20px;
+}
+
+.container .messages .usermessage {
+  color: #608899;
+  margin-right: 20px;
+}
+
+.container .messages .containermessages {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 80%;
+  height: 700px;
+  border: 2px solid #9B9B9B;
+  border-radius: 10px;
+  background-color: white;
+  -webkit-box-shadow: 10px 5px 5px black;
+          box-shadow: 10px 5px 5px black;
+}
+
+.container .messages .containermessages .msg {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 150px;
+  height: 50px;
+  border: 2px solid #608899;
+  border-radius: 10px;
+  color: #608899;
+}
+
+.container .messages .sendmessageuser1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  max-width: 250px;
+  max-height: 250px;
+  background-color: #608899;
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  margin-left: 50px;
+}
+
+.container .messages .sendmessageuser2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  white-space: normal;
+  max-width: auto;
+  max-height: 250px;
+  background-color: #9B9B9B;
+  color: white;
+  margin-top: 20px;
+  padding: 20px;
+  border-radius: 10px;
+  margin-right: 50px;
+}
+
+.containersend {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 100%;
+  height: 200px;
+  background-color: #9B9B9B;
+  padding-top: 40px;
+}
+
+.containersend .message {
+  width: 93%;
+  height: 50px;
+  margin-right: 0px;
+  margin-left: 20px;
+  border-radius: 10px;
+}
+
+.containersend .submit {
+  height: 50px;
+  width: 60px;
+  background-color: #9B9B9B;
+  border: 2px solid white;
+  border-radius: 10px;
+  color: white;
+  font-weight: bold;
+}
+
+.containersend .submit:hover {
+  background-color: white;
+  color: #608899;
+}
+
+@media screen and (max-width: 1100px) {
+  .body {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-line-pack: center;
+        align-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .body .accueil {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    background-color: #608899;
+    margin-left: 100px;
+  }
+  .body .accueil .containerimage {
+    position: absolute;
+    left: -800em;
+    background-color: none;
+    width: 0%;
+  }
+  .body .accueil .containerimage img {
+    display: none;
+    opacity: 0;
+    background-color: #608899;
+    width: 0%;
+  }
+  .body .accueil .containerlogin {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-line-pack: center;
+        align-content: center;
+    margin: 0;
+  }
+  .body .accueil .containerlogin .title {
+    font-size: 50px;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  .body .accueil .containerlogin .login {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: auto;
+  }
+  .body .accueil .containerlogin .login .usrnam {
+    height: 50px;
+    margin-top: 10px;
+  }
+  .body .accueil .containerlogin .login .mail {
+    height: 50px;
+    margin-top: 10px;
+    margin-left: 170px;
+  }
+  .body .accueil .containerlogin .login .send {
+    height: 50px;
+    margin-top: 10px;
+    margin-right: 30px;
+  }
+  .body .accueil .containerlogin .register {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: auto;
+    flex-direction: column;
+    margin-top: 30px;
+    margin-bottom: 50px;
+  }
+  .body .accueil .containerlogin .register .member {
+    margin-left: 20px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .body {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .accueil {
+    width: 500px;
+  }
+  .title {
+    font-size: 10px;
+  }
 }
 /*# sourceMappingURL=style.css.map */
