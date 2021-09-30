@@ -17,13 +17,13 @@
                         <img class="avatar" src="<%=%>" alt="avatar">
                         <div class="usermessage"><%=%></div>
                     </div>
+
             </div>
 
-            <div class="containermessages">
+            <div class="containermessages" id="messages">
 
                 <h2 class="msg">Messages</h2>
 
-                   
                     <div class="sendmessageuser1">
                         <p class="datetime" id=""><%=%></p>
                         <img class="avatar" id="" src="<%=%>" alt="avatar">
@@ -35,12 +35,13 @@
                         <img class="avatar" id="" src="<%=%>" alt="avatar">
                         <p class="textmessage" id=""><%=%></p>
                     </div>
+
             </div>
         </div>
 
-            <form action="" method="post" class="containersend">
-                <input class="message" type="texte" id="" name="msg" placeholder="Message...">
-                <input class="submit"  type="submit" id="" value="Send">           
+            <form class="containersend">
+                <input class="message" type="texte" id="input" name="msg" placeholder="Message...">
+                <button class="submit"  type="submit" id="submit" value="Send">send</button>
             </form>
 
     </div>
