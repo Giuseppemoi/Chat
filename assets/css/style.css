@@ -2,7 +2,7 @@ body {
   background-color: #608899;
 }
 
-#signup {
+.signup {
   text-align: center;
   background-color: white;
   margin-left: 500px;
@@ -15,14 +15,14 @@ h1 {
   color: white;
 }
 
-#signin {
+.signin {
   background-color: #608899;
   border-radius: 20ch;
   margin-top: 10px;
   color: white;
 }
 
-#name {
+.name {
   padding-top: 100px;
 }
 /*# sourceMappingURL=style.css.map */
