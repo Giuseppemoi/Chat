@@ -18,11 +18,15 @@ mongoose.connect(URI).then( () =>{
 })
 
 app.get("/",(req , res) =>{
-    res.sendFile(__dirname + '/test.html')
+    res.sendFile(__dirname + '/index.html')
 })
 
 app.get("/register",(req , res) =>{
     res.sendFile(__dirname + '/register.html')
+})
+
+app.get("/chat",(req , res) =>{
+    res.sendFile(__dirname + '/messages.html')
 })
 
 io.on('connection', (socket) => {
