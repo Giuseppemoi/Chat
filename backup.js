@@ -15,12 +15,24 @@
     </style>
   </head>
   <body>
+      <script src="/socket.io/socket.io.js"></script>
+      <script>
+          let socket = io('http://localhost:3000/');
+          let send = function(){
+              let text = document.getElementById("input").value;
+              socket.emit('chat message',text)
+          }
+          let recu = function(msg){
+              let li = document.createElement('li');
+              li.innerText = msg;
+              document.getElementById('messages').appendChild(li);   
+          }
+          socket.on('chat message', recu);
+        
+      </script>
     <ul id="messages"></ul>
     <form id="form" action="">
-      <input id="input" autocomplete="off" /><button id="submit" type="button">Send</button>
+      <input id="input" autocomplete="off" /><button type="button" onclick="send()">Send</button>
     </form>
-    <script src="/socket.io/socket.io.js"></script>
-
-    <script src="js/client.js"></script>
   </body>
 </html>

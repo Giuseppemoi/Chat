@@ -26,6 +26,9 @@ app.get("/register",(req , res) =>{
 })
 
 io.on('connection', (socket) => {
+    Msg.find().then(result => {
+        socket.emit('output-messages', result);
+    })
     console.log('user connected');
     Msg.find().then((res)=> {
         socket.emit('output-messages', res)
