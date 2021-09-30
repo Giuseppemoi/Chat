@@ -7,366 +7,671 @@ $font:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Can
 *{
     box-sizing: border-box;
 
-.body{
-    display: flex;
-    justify-content: center;
-    margin: 0px;
-    font-family: $font;
-  
-.accueil{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    width: auto;
-    height: 950px;
-    border: 2px solid $colorBorder;
-    margin: 0;
-    padding: 0;
-    
-.containerimage{
-    display: flex;
-    width: 30%;
-    opacity: 0.5;
-    background-color: $colorbackground;
- img{
-    width: 100%;
- }
-}
-.containerlogin{
-    display: flex;
-    flex-direction: column;
-    justify-content: start;
-    align-items: center;
-    width: 70%;
-    background-color: $colorbackground;
-    
-  
-.title{
-    display: flex;
-    font-size: 60px;
-    margin-top: 250px;
-    margin-bottom: 50px;
-    color: white;
-}
-.login{
-    display: flex;
-    margin-bottom: 80px;
-    margin-top: 50px;
-
-.usrnam{
-    display: flex;
-    width: 200px;
-    height: 40px;
-    border-radius: 10px;
-    margin-right: 30px;
-
-}
-.mail{
-    display: flex;
-    width: 200px;
-    border-radius: 10px;
-    margin-right: 200px;
-}
-.send{
-    display: flex;
-    justify-content: center;
-    width: 100px;
-    border: 2px solid white;
-    border-radius: 10px;
-    background-color: $colorbackground;
-    color: white;
-    font-weight: bold;
-    font-family: $font;
-}
-
-.send:hover{
-    background-color: white;
-    color: $colorbackground;
-}
-}
-}
-.register{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    margin-top: 100px;
-
-.member{
-    display: flex;
-    justify-content: center;
-    width: 300px;
-    font-size: 30px;
-    margin-right: 40px;
-    color: white;
- 
-}
-
-.button{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100px;
-    height: 40px;
-    border: 2px solid white;
-    border-radius: 10px;
-    margin-top: 25px;
-    text-decoration: none;
-    color: white;
-    font-weight: bold;
-
-}
-.button:hover{
-    background-color: white;
-    color: $colorbackground;
-}
-}
-}
-}
-}
-.container{
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    height: 100%;
-    background-color: $colorDate;
-    padding: 20px;
-
-.messages{
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    height: 100%;
-    padding-top: 40px;
-    padding-bottom: 40px;
-    border: 2px solid $colorbackground;
-    border-radius: 10px;
-
-
-.containernames{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 15%;
-    height: 700px;
-    background-color: $colorbackground;
-    border: 2px solid $colorBorder;
-    border-radius: 10px;
-    margin-left: 20px;
-    margin-right: 20px;
-    box-shadow: 10px 5px 5px black;
-.users{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    border: 2px solid white;
-    border-radius: 10px;
-    width: 50%;
-    height: 50px;
-    box-shadow: 10px 5px 5px black;
- }
- .senduser{
-     display: flex;
-     flex-direction: row;
-     justify-content: space-between;
-     align-items: center;
-     width: 90%;
-     height: 60px;
-     border: 2px solid white;
-     border-radius: 10px;
-     background-color: white;
- }
-}
-.avatar{
-    width: 50px;
-    border-radius: 50%;
-    margin-left:20px;
-}
-.usermessage{
-    color:$colorbackground;
-    margin-right: 20px;
-}
-.containermessages{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 80%;
-    height: 700px;
-    border: 2px solid $colorBorder;
-    border-radius: 10px;
-    background-color: white;
-    box-shadow: 10px 5px 5px black;
-
-.msg{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 10%;
-    height: 50px;
-    border: 2px solid $colorbackground;
-    border-radius: 10px;
-    color: $colorbackground;
-    box-shadow: 10px 5px 5px black;
-}
-}
-.sendmessageuser1{
-    display: flex;
-    flex-direction: column;
-    align-self: flex-start;
-    max-width: 250px;
-    max-height: 250px;
-    background-color: $colorbackground;
-    color: white;
-    padding: 20px;
-    border-radius: 10px;
-    margin-left: 50px;
-
-}
-.sendmessageuser2{
-    display: flex;
-    flex-direction: column;
-    align-self: flex-end;
-    white-space: normal;
-    max-width: 250px;
-    max-height: 250px;
-    background-color: $colorBorder;
-    color: white;
-    margin-top: 20px;
-    padding: 20px;
-    border-radius: 10px;
-    margin-right: 50px;
-}
-}
-}
-.containersend{
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    height: 200px;
-    background-color: $colorBorder;
-    padding-top: 40px;
- 
-
-.message{
-    width: 93%;
-    height: 50px;
-    margin-right: 0px;
-    margin-left: 20px;
-    border-radius: 10px;
-    
-}
-.submit{
-    height: 50px;
-    width: 5%;
-    background-color: $colorDate;
-    border: 2px solid white;
-    border-radius: 10px;
-    color: white;
-    font-weight: bold;
-}
-.submit:hover{
-    background-color: white;
-    color: $colorbackground;
-}
-}
-
-
-   
-@media screen and (max-width: 1100px) {
     .body{
         display: flex;
         justify-content: center;
-        align-content: center;
-        align-items: center;
-    
-    .accueil{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        background-color: $colorbackground;
-        margin-left: 100px;
+        width: 100%;
+        height: 100%;
+        margin: 0px;
+        font-family: $font;
   
-       
-      
-    .containerimage{
-        position: absolute;
-        left: -800em;
-        background-color: none;
-        width: 0%;
+        .accueil{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            width: 100%;
+            height: 100%;
+            border: 2px solid $colorBorder;
+            margin: 0;
+            padding: 0;
     
-    img{
-        display: none;
-        opacity: 0;
-        background-color: $colorbackground;
-        width: 0%;
-    }
-    }
-    .containerlogin{
-        display: flex;
-        flex-direction: column;
-        align-content: center;
-        margin: 0;
-        
-    
-    .title{
-        font-size: 50px;
-        text-align: center;
-        margin-top: 20px;
-        margin-bottom: 20px;
-    }
-    .login{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: auto;
-    
-    .usrnam{
-       height: 50px;
-       margin-top: 10px;
-      
+            .containerimage{
+                display: flex;
+                width: 30%;
+                opacity: 0.5;
+                background-color: $colorbackground;
 
-    }
-    .mail{
-        height: 50px;
-        margin-top: 10px;
-        margin-left: 170px;
-        
-    }
-    .send{
-        height: 50px;
-        margin-top: 10px;
-        margin-right: 30px;
-        
-    }
-    }
-    .register{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        height: auto;
-        flex-direction: column;
-        margin-top: 30px;
-        margin-bottom: 50px;
+                img{
+                   width: 100%;
+                   height: 100%;
+            
+                }
+            }
+            .containerlogin{
+                display: flex;
+                flex-direction: column;
+                justify-content: start;
+                align-items: center;
+                width: 70%;
+                background-color: $colorbackground;
+    
+  
+                .title{
+                    display: flex;
+                    font-size: 60px;
+                    margin-top: 250px;
+                    margin-bottom: 50px;
+                    color: white;
+                }
+                .login{
+                    display: flex;
+                    margin-bottom: 80px;
+                    margin-top: 50px;
 
-        .member{
-            margin-left: 20px;
+                    .usrnam{
+                        display: flex;
+                        width: 200px;
+                        height: 40px;
+                        border-radius: 10px;
+                        margin-right: 30px;
+                    
+                    }
+                    .mail{
+                        display: flex;
+                        width: 200px;
+                        border-radius: 10px;
+                        margin-right: 200px;
+                    }
+                    .send{
+                        display: flex;
+                        justify-content: center;
+                        width: 100px;
+                        border: 2px solid white;
+                        border-radius: 10px;
+                        background-color: $colorbackground;
+                        color: white;
+                        font-weight: bold;
+                        font-family: $font;
+                    }
+
+                    .send:hover{
+                        background-color: white;
+                        color: $colorbackground;
+                    }
+                }
+            }
+                .register{
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+                    margin-top: 100px;
+                
+                    .member{
+                        display: flex;
+                        justify-content: center;
+                        width: 300px;
+                        font-size: 30px;
+                        margin-right: 40px;
+                        color: white;
+                    
+                    }
+
+                    .button{
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        width: 100px;
+                        height: 40px;
+                        border: 2px solid white;
+                        border-radius: 10px;
+                        margin-top: 25px;
+                        text-decoration: none;
+                        color: white;
+                        font-weight: bold;
+                    
+                    }
+                    .button:hover{
+                        background-color: white;
+                        color: $colorbackground;
+                    }
+                }
         }
     }
-    }
-    }
-    }
-}
-@media screen and (max-width: 500px){
-    .body{
+
+    .container{
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        width: 100%;
+        height: 100%;
+        background-color: $colorDate;
+        padding:30px;
+       
+
+        .messages{
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+            height: 80%;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            border: 2px solid $colorbackground;
+            border-radius: 10px;
+
+            .containernames{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                width: 15%;
+                height: 100%;
+                background-color: $colorbackground;
+                border: 2px solid $colorBorder;
+                border-radius: 10px;
+                margin-left: 20px;
+                margin-right: 20px;
+                box-shadow: 10px 5px 5px black;
+
+                .users{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    color: white;
+                    border: 2px solid white;
+                    border-radius: 10px;
+                    width: 50%;
+                    height: 50px;
+                    box-shadow: 10px 5px 5px black;
+                 }
+                .senduser{
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    align-items: center;
+                    width: 90%;
+                    height: 60px;
+                    border: 2px solid white;
+                    border-radius: 10px;
+                    background-color: white;
+                }
+            }
+            .avatar{
+                width: 30px;
+                border: 1px solid black;
+                border-radius: 50%;
+                margin-left:10px;
+                margin-top: 0;
+                padding-top: 0;
+                box-shadow: 3px 1px 1px gray;
+            }
+            .textmessage{
+                font-size: 15px;
+            }
+            .datetime{
+                display: flex;
+                align-self: flex-end;
+                font-size: 9px;
+                color: white;
+                margin: 0;
+                padding: 0;
+            }
+            .usermessage{
+                color:$colorbackground;
+                margin-right: 20px;
+            }
+            .containermessages{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                width: 80%;
+                height: 100%;
+                border: 2px solid $colorBorder;
+                border-radius: 10px;
+                background-color: white;
+                box-shadow: 10px 5px 5px black;
+                margin-bottom: 0;
+                padding-bottom: 0;
+
+                .msg{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 30%;
+                    height: 50px;
+                    border: 2px solid $colorbackground;
+                    border-radius: 10px;
+                    color: $colorbackground;
+                    box-shadow: 10px 5px 5px black;
+                }
+            }
+            .sendmessageuser1{
+                display: flex;
+                flex-direction: column;
+                align-self: flex-start;
+                overflow-wrap: break-word;
+                max-width: 350px;
+                max-height: 250px;
+                background-color: $colorbackground;
+                color: white;
+                padding: 5px;
+                border-radius: 10px;
+                margin-left: 50px;
+                box-shadow: 5px 2px 2px black;
+            
+            }
+             .sendmessageuser2{
+                 display: flex;
+                 flex-direction: column;
+                 align-self: flex-end;
+                 overflow-wrap: break-word;
+                 max-width: 250px;
+                 max-height: 250px;
+                 background-color: $colorBorder;
+                 color: white;
+                 margin-top: 20px;
+                 padding: 5px;
+                 border-radius: 10px;
+                 margin-right: 50px;
+                 box-shadow: 5px 2px 2px black;
+             }
+            
+        }
+    
+        .containersend{
+          display: flex;
+          flex-direction: row;
+          width: 100%;
+          height: 100px;
+          padding-top: 20px;
+          padding-bottom: 20px;
+          margin-top: 20px;
+          border: 2px solid $colorbackground;
+          border-radius: 10px;
+        
+            .message{
+                width: 93%;
+                height: 50px;
+                margin-right: 0px;
+                margin-left: 20px;
+                border-radius: 10px;
+ 
+            }
+            .submit{
+                height: 50px;
+                width: 5%;
+                background-color: $colorDate;
+                border: 2px solid white;
+                border-radius: 10px;
+                color: white;
+                font-weight: bold;
+            }
+            .submit:hover{
+                background-color: white;
+                color: $colorbackground;
+            }
+        
+        }  
+     }
+}
+
+@media screen and (min-width: 1600px) and (max-width: 2000px) {
+    .body{
+        height: 950px;
     }
-    .accueil{
-        width: 500px;
+}
+ 
+@media screen and (min-width: 1101px) and (max-width: 1599px) {
+    .body{
+        height: 730px;
     }
-    .title{
-        font-size: 10px;
+}
+@media screen and (min-width: 800px) and (max-width: 1100px) {
+    .body{
+        height: 650px;
+        
+       .accueil{
+           
+            .containerimage{
+                position: absolute;
+                left: -800em;
+                background-color: $colorbackground;
+                width: 0%;
+            
+                img{
+                    display: none;
+                    background-color: $colorbackground;
+                    width: 0%;
+                }
+             }
+            .containerlogin{
+                display: flex;
+                flex-direction: column;
+                align-content: center;
+                margin: 0;
+        
+    
+                .title{
+                    font-size: 50px;
+                    text-align: center;
+                    margin-top: 20px;
+                    margin-bottom: 20px;
+                }
+                .login{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    width: auto;
+                
+                    .usrnam{
+                       height: 50px;
+                       margin-top: 10px;
+                    
+                    
+                    }
+                    .mail{
+                        height: 50px;
+                        margin-top: 10px;
+                        margin-left: 170px;
+
+                    }
+                    .send{
+                        height: 50px;
+                        margin-top: 10px;
+                        margin-right: 30px;
+
+                    }
+                }
+                .register{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    height: auto;
+                    margin-top: 30px;
+                    margin-bottom: 50px;
+                
+                    .member{
+                        margin-left: 20px;
+                    }
+                }
+            }
+        }
+        .messages{
+        
+            width: 100%;
+            height: 80%;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            border: none;  
+        
+        .containernames{
+            
+            width: 15%;
+            height: auto;
+            
+            .users{
+                font-size: 20px;
+                width: 60%;
+                height: 30px;
+           
+
+             }
+            .senduser{
+                width: 97%;
+                height: 40px;
+               
+            }
+        }
+            .avatar{
+                width: 30px;
+                border: 1px solid black;
+                border-radius: 50%;
+                margin-left:10px;
+                margin-top: 0;
+                padding-top: 0;
+                box-shadow: 3px 1px 1px gray;
+            }
+            .textmessage{
+                font-size: 15px;
+            }
+            .datetime{
+                display: flex;
+                align-self: flex-end;
+                font-size: 9px;
+                color: white;
+                margin: 0;
+                padding: 0;
+            }
+            .usermessage{
+                color:$colorbackground;
+                margin-right: 20px;
+            }
+            .containermessages{
+                
+                width: 80%;
+                height: 100%;
+                border: 2px solid $colorBorder;
+                border-radius: 10px;
+                background-color: white;
+                box-shadow: 10px 5px 5px black;
+                margin-bottom: 0;
+                padding-bottom: 0;
+
+                .msg{
+                    width: 30%;
+                    height: 30px;
+                    font-size: 20px;
+                   
+                }
+            } 
+            .sendmessageuser1{
+                display: flex;
+                flex-direction: column;
+                align-self: flex-start;
+                overflow-wrap: break-word;
+                max-width: 350px;
+                max-height: 250px;
+                background-color: $colorbackground;
+                color: white;
+                padding: 5px;
+                border-radius: 10px;
+                margin-left: 50px;
+                box-shadow: 5px 2px 2px black;
+            
+            }
+            .sendmessageuser2{
+                 display: flex;
+                 flex-direction: column;
+                 align-self: flex-end;
+                 overflow-wrap: break-word;
+                 max-width: 250px;
+                 max-height: 250px;
+                 background-color: $colorBorder;
+                 color: white;
+                 margin-top: 20px;
+                 padding: 5px;
+                 border-radius: 10px;
+                 margin-right: 50px;
+                 box-shadow: 5px 2px 2px black;
+             }
+        }
+            .containersend{
+              
+              height: 80px;
+              margin-top: 10px;
+              border: none;
+
+                .message{
+                    width: 90%;
+                    height: 50px;
+                    margin-right: 0px;
+                    margin-left: 20px;
+                    border-radius: 10px;
+                
+                }
+                .submit{
+                    height: 50px;
+                    width: 10%;
+                    background-color: $colorDate;
+                    border: 2px solid white;
+                    border-radius: 10px;
+                    color: white;
+                    font-weight: bold;
+                }
+                .submit:hover{
+                    background-color: white;
+                    color: $colorbackground;
+                }
+            
+            }
+    }
+}
+
+@media screen and (min-width: 501px) and (max-width: 799px) {
+    .body{
+       height: 650px;
+        
+        
+        .accueil{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-self: center;
+            align-items: center;
+            background-color: $colorbackground;
+            margin-left: 100px;
+            width:150%;
+            height: 1000px;
+  
+            .containerimage{
+                position: absolute;
+                left: -800em;
+                background-color: $colorbackground;
+                width: 0%;
+            
+                img{
+                    display: none;
+                    background-color: $colorbackground;
+                    width: 0%;
+                }
+             }
+            .containerlogin{
+                display: flex;
+                flex-direction: column;
+                align-content: center;
+                margin: 0;
+        
+    
+                .title{
+                    font-size: 50px;
+                    text-align: center;
+                    margin-top: 20px;
+                    margin-bottom: 20px;
+                }
+                .login{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    width: auto;
+                
+                    .usrnam{
+                       height: 50px;
+                       margin-top: 10px;
+                    
+                    
+                    }
+                    .mail{
+                        height: 50px;
+                        margin-top: 10px;
+                        margin-left: 170px;
+
+                    }
+                    .send{
+                        height: 50px;
+                        margin-top: 10px;
+                        margin-right: 30px;
+
+                    }
+                }
+                .register{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    height: auto;
+                    margin-top: 30px;
+                    margin-bottom: 50px;
+                
+                    .member{
+                        margin-left: 20px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .body{
+       height: 100%;
+    
+        .accueil{
+            display: flex;
+            align-self: center;
+            width: auto;
+            height: 760px;
+
+            .containerimage{
+                position: absolute;
+                left: -800em;
+                background-color: none;
+                width: 0%;
+            
+                img{
+                    display: none;
+                    opacity: 0;
+                    background-color: $colorbackground;
+                    width: 0%;
+                }
+             }
+            .containerlogin{
+                display: flex;
+                flex-direction: column;
+                align-content: center;
+                margin: 0;
+            
+                .title{
+                    font-size: 35px;
+                    overflow-wrap: break-word;
+                    text-align: center;
+                    margin-top: 20px;
+                    margin-bottom: 20px;
+                }
+                .login{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    width: auto;
+                
+                    .usrnam{
+                       height: 50px;
+                       margin-top: 10px;
+                    
+                    
+                    }
+                    .mail{
+                        height: 50px;
+                        margin-top: 10px;
+                        margin-left: 170px;
+
+                    }
+                    .send{
+                        height: 50px;
+                        margin-top: 10px;
+                        margin-right: 30px;
+
+                    }
+                }
+                .register{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    height: auto;
+                    margin-top: 30px;
+                    margin-bottom: 50px;
+                
+                    .member{
+                        margin-left: 20px;
+                        font-size: 20px;
+                    }
+                }
+            }
+        }
     }
 }
