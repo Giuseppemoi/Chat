@@ -16,6 +16,7 @@ const URI = "mongodb+srv://admin:abmyn0ERpP7vIJeJ@chat.mmksw.mongodb.net/message
 mongoose.connect(URI).then( () =>{
     console.log('connected')
 })
+let ejs = require('ejs');
 
 app.get("/",(req , res) =>{
     res.sendFile(__dirname + '/index.html')
