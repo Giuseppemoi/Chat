@@ -1,31 +1,78 @@
-<<<<<<< HEAD
+.signup {
+  text-align: center;
+  color: white;
+  background-color: #608899;
+  border-radius: 6px;
+  margin-top: 2ch;
+  width: 200px;
+  height: 50px;
+}
+
+.column {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  width: 10em;
+}
+
+.titre {
+  color: white;
+  text-align: center;
+}
+
+.sign1 {
+  margin-right: 70ch;
+  margin-left: 70ch;
+}
+
+.sign2 {
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: white;
+  background-position: center;
+}
+
 body {
   background-color: #608899;
 }
 
-.signup {
-  text-align: center;
-  background-color: white;
-  margin-left: 500px;
-  margin-right: 500px;
-  max-width: 100%;
-}
-
-h1 {
-  text-align: center;
-  color: white;
-}
-
-.signin {
-  background-color: #608899;
-  border-radius: 20ch;
-  margin-top: 10px;
-  color: white;
-}
-
 .name {
   padding-top: 100px;
-=======
+}
+
+.avatar1 {
+  background-image: url(assets/img/avatar1.png);
+}
+
+.image {
+  width: 50px;
+  margin: 3px;
+  display: inline-block;
+}
+
+.avatar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -ms-flex-line-pack: stretch;
+      align-content: stretch;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -198,7 +245,6 @@ h1 {
 * .body .accueil .register .button:hover {
   background-color: white;
   color: #608899;
->>>>>>> juju
 }
 
 .container {
