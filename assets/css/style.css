@@ -175,272 +175,21 @@
   color: #608899;
 }
 
-* .container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  width: 100%;
-  height: 100%;
-  background-color: #9B9B9B;
-  padding: 30px;
-}
-
-* .container .messages {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  width: 100%;
-  height: 80%;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  border: 2px solid #608899;
-  border-radius: 10px;
-}
-
-* .container .messages .containernames {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  width: 15%;
-  height: 100%;
-  background-color: #608899;
-  border: 2px solid #9B9B9B;
-  border-radius: 10px;
-  margin-left: 20px;
-  margin-right: 20px;
-  -webkit-box-shadow: 10px 5px 5px black;
-          box-shadow: 10px 5px 5px black;
-}
-
-* .container .messages .containernames .users {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  color: white;
-  border: 2px solid white;
-  border-radius: 10px;
-  width: 50%;
-  height: 50px;
-  -webkit-box-shadow: 10px 5px 5px black;
-          box-shadow: 10px 5px 5px black;
-}
-
-* .container .messages .containernames .senduser {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  width: 90%;
-  height: 60px;
-  border: 2px solid white;
-  border-radius: 10px;
-  background-color: white;
-}
-
-* .container .messages .avatar {
-  width: 30px;
-  border: 1px solid black;
-  border-radius: 50%;
-  margin-left: 10px;
-  margin-top: 0;
-  padding-top: 0;
-  -webkit-box-shadow: 3px 1px 1px gray;
-          box-shadow: 3px 1px 1px gray;
-}
-
-* .container .messages .textmessage {
-  font-size: 15px;
-}
-
-* .container .messages .datetime {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-item-align: end;
-      align-self: flex-end;
-  font-size: 9px;
-  color: white;
-  margin: 0;
-  padding: 0;
-}
-
-* .container .messages .usermessage {
-  color: #608899;
-  margin-right: 20px;
-}
-
-* .container .messages .containermessages {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  overflow: scroll;
-  width: 80%;
-  height: 100%;
-  border: 2px solid #9B9B9B;
-  border-radius: 10px;
-  background-color: white;
-  -webkit-box-shadow: 10px 5px 5px black;
-          box-shadow: 10px 5px 5px black;
-  margin-bottom: 0;
-  padding-bottom: 0;
-}
-
-* .container .messages .containermessages .msg {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  width: 30%;
-  height: 50px;
-  border: 2px solid #608899;
-  border-radius: 10px;
-  color: #608899;
-  -webkit-box-shadow: 10px 5px 5px black;
-          box-shadow: 10px 5px 5px black;
-}
-
-* .container .messages .sendmessageuser1 {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -ms-flex-item-align: start;
-      align-self: flex-start;
-  overflow-wrap: break-word;
-  max-width: 350px;
-  max-height: 250px;
-  background-color: #608899;
-  color: white;
-  padding: 5px;
-  border-radius: 10px;
-  margin-left: 50px;
-  -webkit-box-shadow: 5px 2px 2px black;
-          box-shadow: 5px 2px 2px black;
-}
-
-* .container .messages .sendmessageuser2 {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -ms-flex-item-align: end;
-      align-self: flex-end;
-  overflow-wrap: break-word;
-  max-width: 250px;
-  max-height: 250px;
-  background-color: #9B9B9B;
-  color: white;
-  margin-top: 20px;
-  padding: 5px;
-  border-radius: 10px;
-  margin-right: 50px;
-  -webkit-box-shadow: 5px 2px 2px black;
-          box-shadow: 5px 2px 2px black;
-}
-
-* .container .containersend {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  width: 100%;
-  height: 100px;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  margin-top: 20px;
-  border: 2px solid #608899;
-  border-radius: 10px;
-}
-
-* .container .containersend .message {
-  width: 93%;
-  height: 50px;
-  margin-right: 0px;
-  margin-left: 20px;
-  border-radius: 10px;
-}
-
-* .container .containersend .submit {
-  height: 50px;
-  width: 5%;
-  background-color: #9B9B9B;
-  border: 2px solid white;
-  border-radius: 10px;
-  color: white;
-  font-weight: bold;
-}
-
-* .container .containersend .submit:hover {
-  background-color: white;
-  color: #608899;
-}
-
 @media screen and (min-width: 1600px) and (max-width: 2000px) {
   .body {
-    height: 950px;
+    height: 750px;
   }
 }
 
 @media screen and (min-width: 1101px) and (max-width: 1599px) {
   .body {
-    height: 730px;
+    height: 700px;
   }
 }
 
 @media screen and (min-width: 800px) and (max-width: 1100px) {
   .body {
-    height: 650px;
+    height: 850px;
   }
   .body .accueil .containerimage {
     position: absolute;
@@ -516,143 +265,11 @@
   .body .accueil .containerlogin .register .member {
     margin-left: 20px;
   }
-  .body .messages {
-    width: 100%;
-    height: 80%;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    border: none;
-  }
-  .body .messages .containernames {
-    width: 15%;
-    height: auto;
-  }
-  .body .messages .containernames .users {
-    font-size: 20px;
-    width: 60%;
-    height: 30px;
-  }
-  .body .messages .containernames .senduser {
-    width: 97%;
-    height: 40px;
-  }
-  .body .messages .avatar {
-    width: 30px;
-    border: 1px solid black;
-    border-radius: 50%;
-    margin-left: 10px;
-    margin-top: 0;
-    padding-top: 0;
-    -webkit-box-shadow: 3px 1px 1px gray;
-            box-shadow: 3px 1px 1px gray;
-  }
-  .body .messages .textmessage {
-    font-size: 15px;
-  }
-  .body .messages .datetime {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-item-align: end;
-        align-self: flex-end;
-    font-size: 9px;
-    color: white;
-    margin: 0;
-    padding: 0;
-  }
-  .body .messages .usermessage {
-    color: #608899;
-    margin-right: 20px;
-  }
-  .body .messages .containermessages {
-    width: 80%;
-    height: 100%;
-    border: 2px solid #9B9B9B;
-    border-radius: 10px;
-    background-color: white;
-    -webkit-box-shadow: 10px 5px 5px black;
-            box-shadow: 10px 5px 5px black;
-    margin-bottom: 0;
-    padding-bottom: 0;
-  }
-  .body .messages .containermessages .msg {
-    width: 30%;
-    height: 30px;
-    font-size: 20px;
-  }
-  .body .messages .sendmessageuser1 {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -ms-flex-item-align: start;
-        align-self: flex-start;
-    overflow-wrap: break-word;
-    max-width: 350px;
-    max-height: 250px;
-    background-color: #608899;
-    color: white;
-    padding: 5px;
-    border-radius: 10px;
-    margin-left: 50px;
-    -webkit-box-shadow: 5px 2px 2px black;
-            box-shadow: 5px 2px 2px black;
-  }
-  .body .messages .sendmessageuser2 {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -ms-flex-item-align: end;
-        align-self: flex-end;
-    overflow-wrap: break-word;
-    max-width: 250px;
-    max-height: 250px;
-    background-color: #9B9B9B;
-    color: white;
-    margin-top: 20px;
-    padding: 5px;
-    border-radius: 10px;
-    margin-right: 50px;
-    -webkit-box-shadow: 5px 2px 2px black;
-            box-shadow: 5px 2px 2px black;
-  }
-  .body .containersend {
-    height: 80px;
-    margin-top: 10px;
-    border: none;
-  }
-  .body .containersend .message {
-    width: 90%;
-    height: 50px;
-    margin-right: 0px;
-    margin-left: 20px;
-    border-radius: 10px;
-  }
-  .body .containersend .submit {
-    height: 50px;
-    width: 10%;
-    background-color: #9B9B9B;
-    border: 2px solid white;
-    border-radius: 10px;
-    color: white;
-    font-weight: bold;
-  }
-  .body .containersend .submit:hover {
-    background-color: white;
-    color: #608899;
-  }
 }
 
-@media screen and (min-width: 501px) and (max-width: 799px) {
+@media screen and (min-width: 800px) and (max-width: 1100px) and (min-width: 501px) and (max-width: 799px) {
   .body {
-    height: 650px;
+    height: 770px;
   }
   .body .accueil {
     display: -webkit-box;
@@ -751,9 +368,9 @@
   }
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (min-width: 800px) and (max-width: 1100px) and (max-width: 500px) {
   .body {
-    height: 100%;
+    height: 900px;
   }
   .body .accueil {
     display: -webkit-box;

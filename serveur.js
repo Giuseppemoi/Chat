@@ -1,6 +1,7 @@
 let app = require('express')();
 let http = require('http').Server(app);
 let io = require('socket.io')(http);
+let ejs = require('ejs');
 
 app.get("/",(req , res) =>{
     res.sendFile(__dirname + '/test.html')
