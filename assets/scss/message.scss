@@ -70,8 +70,8 @@ $font:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Can
                     }
                 }
                 .avatar{
-                    width: 25px;
-                    height:25px;
+                    width: 30px;
+                    height: 30px;
                     border: 1px solid black;
                     border-radius: 50%;
                     margin-left:10px;
@@ -139,7 +139,6 @@ $font:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Can
                     margin-left: 50px;
                     box-shadow: 5px 2px 2px black;
                 }
-
                  .sendmessageuser2{
                      display: flex;
                      flex-direction: column;
@@ -156,6 +155,25 @@ $font:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Can
                      margin-right: 50px;
                      box-shadow: 5px 2px 2px black;
                  } 
+                 .edit{
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: flex-end;
+                    margin-top: 20px;
+                  
+
+                    .modified{
+                        display: flex;
+                        width: 20px;
+                        height: 20px;
+                    }
+                    .deleted{
+                        display: flex;
+                        width: 20px;
+                        height: 20px;
+                        
+                    }
+                }
             }
             .containersend {
               display: flex;
