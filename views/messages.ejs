@@ -4,14 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="assets/css/message.css">
+    <link rel="stylesheet" type="text/css" href="css/message.css">
     <title>Messages</title>
 </head>
 <body class="body">
     <div class="container">
-        <form action="/logout" method="post">
-            <button>Logout</button>
-        </form>
          <div class="messages">
             <div class="containernames">
                 
@@ -30,8 +27,8 @@
                         <img class="avatar" id="" src="" alt="avatar">
                         <p class="textmessage" id=""></p>
                         <div class="edit">
-                            <a class="modified" href=""><img src="assets/img/crayon.png" alt="crayon"></a>
-                            <a class="deleted" href=""><img src="assets/img/delete.png" alt="dossier avec croix"></a>
+                            <a class="modified" href=""><img src="img/crayon.png" alt="crayon"></a>
+                            <a class="deleted" href=""><img src="img/delete.png" alt="dossier avec croix"></a>
                        </div>
                     </div>
 
@@ -40,8 +37,8 @@
                         <img class="avatar" id="" src="" alt="avatar">
                         <p class="textmessage" id=""></p>
                         <div class="edit">
-                            <a class="modified" href=""><img src="assets/img/crayon.png" alt="crayon"></a>
-                            <a class="deleted" href=""><img src="assets/img/delete.png" alt="dossier avec croix"></a>
+                            <a class="modified" href=""><img src="img/crayon.png" alt="crayon"></a>
+                            <a class="deleted" href=""><img src="img/delete.png" alt="dossier avec croix"></a>
                        </div>
                     </div>
 
@@ -54,10 +51,9 @@
             </form>
 
             <form action="/logout" method="post" class="buttonlogout">
-                <button class="logout" type="button">LOGOUT</button>
+                <button class="logout">LOGOUT</button>
             </form>
     </div>
     <script src="/socket.io/socket.io.js"></script>
-    <script src="js/client.js"></script>
 </body>
 </html>
