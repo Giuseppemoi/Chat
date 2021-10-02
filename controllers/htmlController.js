@@ -4,6 +4,6 @@ exports.chat = (req, res) => {
     if (req.session.user) {
         res.render('messages', {userName: req.session.user.userName})
     } else {
-        res.render('index')
+        res.redirect('/')
     }
 }
