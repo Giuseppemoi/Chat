@@ -5,7 +5,7 @@
   "main": "serveur.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon serveur.js"
+    "dev": "nodemon db"
   },
   "repository": {
     "type": "git",
@@ -18,9 +18,17 @@
   },
   "homepage": "https://github.com/Giuseppemoi/Chat#readme",
   "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "connect-flash": "^0.1.1",
+    "connect-mongo": "^3.2.0",
+    "dotenv": "^10.0.0",
+    "ejs": "^3.1.5",
     "express": "^4.17.1",
+    "express-session": "^1.17.2",
+    "mongodb": "^3.6.3",
     "mongoose": "^6.0.8",
     "nodemon": "^2.0.13",
-    "socket.io": "^4.2.0"
+    "socket.io": "^4.2.0",
+    "validator": "^13.6.0"
   }
 }

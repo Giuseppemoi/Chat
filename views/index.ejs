@@ -15,9 +15,14 @@
         <div class="containerlogin">
             <h1 class="title">Welcome to the Real Chat Time!</h1>
 
-            <form action="" method="post" class="login">
-                <input class="usrnam" type="text" id="" name="username" placeholder="Username...">
-                <input class="mail" type="email" id="" name="email" placeholder="Email...">
+            <% if (locals.errors) {%>
+            <% errors.forEach((message) => { %>
+                <div class="error"> <%= message %></div>
+            <% }) %>
+            <% } %>
+            <form action="/login" method="post" class="login">
+                <input class="usrnam" type="text" id="" name="login" placeholder="Username...">
+                <input class="mail" type="password" id="" name="password" placeholder="Passwordemail" placeholder="Email...">
                 <input class="send" type="submit" id="" value="LOGIN">
             </form>
 
@@ -26,7 +31,6 @@
 
                 <a href="/register" class="button">JOIN US</a>
 
-                
             </div>    
         </div>  
     </div> 
