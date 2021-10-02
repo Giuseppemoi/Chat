@@ -16,7 +16,11 @@
         <h3>That may take 1 minute...</h3>
 
         <form method='post' action='/register'>
-            <div class="error"></div>
+            <% if (locals.regErrors) {%>
+                <% regErrors.forEach((message) => { %>
+                    <div class="error"> <%= message %></div>
+                <% }) %>
+            <% } %>
             <label for="username"class="name">Name</label>
             <input type="text" name='login' id="username">
             <label for="Email"class="name">Email</label>
@@ -29,6 +33,5 @@
         </form>
         Already have an account ? Go<a href="/"> there </a>then
     </div>
-
 </body>
 </html>

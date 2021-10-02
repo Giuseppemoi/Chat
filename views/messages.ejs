@@ -9,20 +9,22 @@
 </head>
 <body class="body">
     <div class="container">
+        <form action="/logout" method="post">
+            <button>Logout</button>
+        </form>
          <div class="messages">
             <div class="containernames">
                 
                 <h2 class="users">Users</h2>
-                <div class="senduser">
-                    <img class="avatar" src="" alt="avatar">
-                    <div class="usermessage"></div>
-                </div>
+                    <div class="senduser">
+                        <img class="avatar" src="" alt="avatar">
+                        <div class="usermessage"><%= userName %></div>
+                    </div>
             </div>
 
             <div class="containermessages" id="messages">
 
                 <h2 class="msg">Messages</h2>
-                   
                     <div class="sendmessageuser1">
                         <p class="datetime" id=""></p>
                         <img class="avatar" id="" src="" alt="avatar">
@@ -41,8 +43,8 @@
                             <a class="modified" href=""><img src="assets/img/crayon.png" alt="crayon"></a>
                             <a class="deleted" href=""><img src="assets/img/delete.png" alt="dossier avec croix"></a>
                        </div>
-
                     </div>
+
             </div>
         </div>
 
