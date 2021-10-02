@@ -1,8 +1,22 @@
 const express = require("express");
+const session = require('express-session');
+const MongoStore = require('connect-mongo')(session)
+const flash = require('connect-flash');
 const app = express();
 const http = require('http').Server(app);
 const io = require('socket.io')(http);
 // const mongoose = require('mongoose')
+
+let sessionOptions = session({
+    secret: "Real time chat app!",
+    store: new MongoStore({client: require('./db')}),
+    resave: false,
+    saveUninitialized: false,
+    cookie: { maxAge: 1000 * 60 * 60 * 24, httpOnly: true}
+})
+
+app.use(sessionOptions)
+app.use(flash())
 
 const Msg = require('./assets/model/msgSchema')
 const User = require('./assets/model/userSchema')
