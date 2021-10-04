@@ -136,7 +136,7 @@
   display: flex;
   -ms-flex-item-align: end;
       align-self: flex-end;
-  font-size: 9px;
+  font-size: 10px;
   color: white;
   margin: 0;
   padding: 0;
@@ -145,6 +145,23 @@
 * .body .container .messages .usermessage {
   color: #608899;
   margin-right: 20px;
+}
+
+* .body .container .messages .profil {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+* .body .container .messages .profil .usernamemessage {
+  font-size: 10px;
 }
 
 * .body .container .messages .containermessages {
@@ -402,10 +419,6 @@
     height: 40px;
   }
   .body
-.container .messages .avatar {
-    width: 30px;
-  }
-  .body
 .container .messages .textmessage {
     font-size: 15px;
   }
@@ -456,8 +469,6 @@
     display: none;
   }
   .body .container .avatar {
-    width: 15px;
-    height: 15px;
     margin-left: 5px;
     margin-top: 0;
     margin-bottom: 5px;
@@ -555,8 +566,6 @@
     padding-right: 15px;
   }
   .body .container .messages .avatar {
-    width: 15px;
-    height: 15px;
     margin-bottom: 15px;
     -webkit-box-shadow: none;
             box-shadow: none;
