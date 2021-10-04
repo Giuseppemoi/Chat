@@ -1,3 +1,12 @@
+let date1 = new Date();
+
+let dateLocale = date1.toLocaleString('en-US',{
+    weekday: 'short',
+    year: 'numeric',
+    month: 'short',
+    day: 'numeric',
+    hour: 'numeric',
+    minute: 'numeric'});
 class Chat {
     constructor() {
         this.chatLog = document.querySelector('#messages')
@@ -21,7 +30,7 @@ class Chat {
         this.socket.emit('msg', {message: this.chatField.value})
         this.chatLog.insertAdjacentHTML('beforeend',`
         <div class="sendmessageuser1">
-            <p class="datetime" id="${new Date()}"></p>
+            <p class="datetime" id="">${dateLocale}</p>
             <img class="avatar" id="" src="img/Avatar2.png" alt="avatar">
             <p class="textmessage" id="">${this.chatField.value}</p>
             <div class="edit">
@@ -95,7 +104,7 @@ class Chat {
     displayMessage(data) {
         this.chatLog.insertAdjacentHTML('beforeend', `
         <div class="sendmessageuser2">
-            <p class="datetime" id="${new Date()}"></p>
+            <p class="datetime" id="">${dateLocale}</p>
             <img class="avatar" id="" src="img/avatar1.png" alt="avatar">
             <p>${data.username}</p>
             <p class="textmessage" id="">${data.message}</p>

@@ -3,7 +3,11 @@ const session = require('express-session');
 const MongoStore = require('connect-mongo')(session)
 const flash = require('connect-flash');
 const sanitizeHTML = require('sanitize-html');
+const moment = require('moment');
 const app = express();
+
+moment().format('LLLL');
+console.log(moment().format('LLLL'))
 
 const msgCollection = require ('./db').db().collection('msgs')
 
@@ -74,7 +78,7 @@ io.on('connection', function(socket) {
 
         socket.emit('welcome', {username: user.userName, avatar: user.avatar})
         socket.on('msg', function(data) {
-            const message = new Msg({username: user.userName, msg: sanitizeHTML(data.message, {allowedTags: [], allowedAttributes: {}}), date: new Date()})
+            const message = new Msg({username: user.userName, msg: sanitizeHTML(data.message, {allowedTags: [], allowedAttributes: {}}), date: moment().format('llll')})
             msgCollection.insertOne(message).then(()=> {
                 socket.broadcast.emit('msg', {message: sanitizeHTML(data.message, {allowedTags: [], allowedAttributes: {}}), username: user.userName, avatar: user.avatar})
             })
