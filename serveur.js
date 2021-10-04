@@ -7,6 +7,7 @@ const app = express();
 
 const msgCollection = require ('./db').db().collection('msgs')
 
+let userArray = []
 
 let sessionOptions = session({
     secret: "Real time chat app!",
@@ -64,6 +65,10 @@ io.use(function (socket, next) {
 io.on('connection', function(socket) {
     // new user connected ?
     if (socket.request.session.user) {
+        if (userArray.indexOf(socket.request.session.user.userName) === -1) {
+            userArray.push(socket.request.session.user.userName)
+        }
+        io.emit('newUserConnected', userArray)
 
         msgCollection.find().toArray(function(err, docs) {
             //console.log(socket.request.session.user.userName)
@@ -81,6 +86,13 @@ io.on('connection', function(socket) {
             //socket.broadcast.emit('msg', {message: sanitizeHTML(data.message, {allowedTags: [], allowedAttributes: {}}), username: user.userName, avatar: user.avatar})
         })
     }
+
+    socket.on('disconnect', function() {
+        io.emit('userDisconnected', socket.request.session.user)
+    })
 })
 
+// socket.on('disconnect', function() {
+//     console.log('disconnect')
+// })
 module.exports = server
