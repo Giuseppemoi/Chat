@@ -4,7 +4,8 @@ $colorBorder: #9B9B9B;
 $colorbackground: #608899; 
 $colorDate: #9B9B9B; 
 $font:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-//----------------------------------------------------------------------
+
+
 *{
     box-sizing: border-box;
 
@@ -12,22 +13,19 @@ $font:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Can
     display: flex;
     justify-content: center;
     margin: 0px;
-    font: $font;
+    font-family: $font;
     
-  
         .accueil{
             display: flex;
             flex-direction: row;
             justify-content: space-around;
             width: 100%;
-            height: 100%;
-            border: 2px solid $colorBorder;
-            margin: 0;
-            padding: 0;
+            height: 100vh;
     
             .containerimage{
                 display: flex;
-                width: 30%;
+                width: 20%;
+                height: 100vh;
                 opacity: 0.5;
                 background-color: $colorbackground;
 
@@ -42,7 +40,8 @@ $font:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Can
                 flex-direction: column;
                 justify-content: start;
                 align-items: center;
-                width: 70%;
+                width: 80%;
+                height: 100vh;
                 background-color: $colorbackground;
     
   
@@ -66,7 +65,7 @@ $font:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Can
                         margin-right: 30px;
                     
                     }
-                    .mail{
+                    .password{
                         display: flex;
                         width: 200px;
                         border-radius: 10px;
@@ -128,23 +127,13 @@ $font:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Can
         }
     }
 }
-@media screen and (min-width: 1600px) and (max-width: 2000px) {
-    .body{
-        height: 750px;
-    }
-}
- 
-@media screen and (min-width: 1101px) and (max-width: 1599px) {
-    .body{
-        height: 700px;
-    }
-}
+
+
 @media screen and (min-width: 800px) and (max-width: 1100px) {
     .body{
-        height: 850px;
-        
-        .accueil{
-           
+
+         .accueil{
+          
             .containerimage{
                 position: absolute;
                 left: -800em;
@@ -160,15 +149,17 @@ $font:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Can
             .containerlogin{
                 display: flex;
                 flex-direction: column;
-                align-content: center;
-                margin: 0;
+                padding: 0;
+                width: 100%;
+               
         
     
                 .title{
-                    font-size: 50px;
+                    font-size: 40px;
                     text-align: center;
                     margin-top: 20px;
                     margin-bottom: 20px;
+                    
                 }
                 .login{
                     display: flex;
@@ -182,7 +173,7 @@ $font:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Can
                     
                     
                     }
-                    .mail{
+                    .password{
                         height: 50px;
                         margin-top: 10px;
                         margin-left: 170px;
@@ -210,11 +201,11 @@ $font:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Can
             }
         }
     }   
+}
 
 @media screen and (min-width: 501px) and (max-width: 799px) {
     .body{
-       height: 770px;
-        
+      
         .accueil{
             display: flex;
             flex-direction: column;
@@ -222,11 +213,9 @@ $font:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Can
             align-self: center;
             align-items: center;
             background-color: $colorbackground;
-            margin-left: 100px;
-            width:150%;
-            height: 1000px;
-           
-  
+            margin-left: 0;
+            
+         
             .containerimage{
                 position: absolute;
                 left: -800em;
@@ -243,11 +232,9 @@ $font:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Can
                 display: flex;
                 flex-direction: column;
                 align-content: center;
-                margin: 0;
-        
-    
+               
                 .title{
-                    font-size: 50px;
+                    font-size: 30px;
                     text-align: center;
                     margin-top: 20px;
                     margin-bottom: 20px;
@@ -263,7 +250,7 @@ $font:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Can
                        margin-top: 10px;
                     }
 
-                    .mail{
+                    .password{
                         height: 50px;
                         margin-top: 10px;
                         margin-left: 170px;
@@ -278,7 +265,6 @@ $font:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Can
                     display: flex;
                     flex-direction: column;
                     align-items: center;
-                    height: auto;
                     margin-top: 30px;
                     margin-bottom: 50px;
                 
@@ -293,14 +279,12 @@ $font:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Can
 
 @media screen and (max-width: 500px) {
     .body{
-       height: 900px;
-    
+     background-color: $colorBorder;
         .accueil{
             display: flex;
             align-self: center;
-            width: auto;
-            height: 760px;
-
+            
+          
             .containerimage{
                 position: absolute;
                 left: -800em;
@@ -318,10 +302,15 @@ $font:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Can
                 display: flex;
                 flex-direction: column;
                 align-content: center;
+                align-self: center;
+                justify-content: center;
                 margin: 0;
+                padding-left: 45px;
+                width: 100vh;
+                height: auto;
             
                 .title{
-                    font-size: 35px;
+                    font-size: 25px;
                     overflow-wrap: break-word;
                     text-align: center;
                     margin-top: 20px;
@@ -331,7 +320,8 @@ $font:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Can
                     display: flex;
                     flex-direction: column;
                     align-items: center;
-                    width: auto;
+                    width: 100%;
+                 
                 
                     .usrnam{
                        height: 50px;
@@ -339,7 +329,7 @@ $font:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Can
                     
                     
                     }
-                    .mail{
+                    .password{
                         height: 50px;
                         margin-top: 10px;
                         margin-left: 170px;
@@ -347,7 +337,7 @@ $font:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Can
                     }
                     .send{
                         height: 50px;
-                        margin-top: 10px;
+                        margin-top: 60px;
                         margin-right: 30px;
 
                     }
@@ -356,9 +346,8 @@ $font:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Can
                     display: flex;
                     flex-direction: column;
                     align-items: center;
-                    height: auto;
-                    margin-top: 30px;
-                    margin-bottom: 50px;
+                    margin-top: 0px;
+                    margin-bottom: 30px;
                 
                     .member{
                         margin-left: 20px;
@@ -369,7 +358,7 @@ $font:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Can
         }
     }
 }
-}
+
             
         
     
