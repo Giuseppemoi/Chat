@@ -124,8 +124,10 @@
 }
 
 * .body .container .messages .textmessage {
-  font-size: 14px;
-  margin: 0;
+  font-size: 20px;
+  margin-left: 5px;
+  margin-top: 10px;
+  margin-bottom: 5px;
   padding-left: 3px;
   padding-right: 3px;
 }
