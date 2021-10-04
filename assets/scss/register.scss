@@ -17,7 +17,7 @@ $colorBorder: #9B9B9B;
  
  @media screen and (min-width: 501px) and (max-width: 799px)
 {
-    
+  
 .sign2 {
     //text-align: center;
     display: flex;
@@ -32,7 +32,9 @@ $colorBorder: #9B9B9B;
 {
    
 }
-
+.error {
+    color: red;
+}  
 span {
     display: flex;
 

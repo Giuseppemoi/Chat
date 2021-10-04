@@ -17,6 +17,10 @@
   }
 }
 
+.error {
+  color: red;
+}
+
 span {
   display: -webkit-box;
   display: -ms-flexbox;
