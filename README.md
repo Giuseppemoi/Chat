@@ -1,3 +1,4 @@
+![Preview](assets/img/uses-ejs(1).svg) ![JS](assets/img/uses-javascript(1).svg) ![SCSS](assets/img/uses-scss(1).svg)
 # Real Chat Time
 ----------------
 ### Description
