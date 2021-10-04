@@ -9,25 +9,27 @@ $font:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Can
     .body{
         display: flex;
         justify-content: center;
-        width: 100%;
-        height: 100%;
+        align-content: center;
         margin: 0px;
         font-family: $font;
+       
 
         .container{
             display: flex;
             flex-direction: column;
-            width: 100%;
-            height: 900px;
             background-color: $colorDate;
+            width: 100%;
+            height: 100vh;
             padding:30px;
+
+         
            
             .messages{
                 display: flex;
                 flex-direction: row;
                 align-self: center;
                 width: 100%;
-                height: 60%;
+                height: 70vh;
                 padding-top: 20px;
                 padding-bottom: 20px;
                 border: 2px solid $colorbackground;
@@ -137,6 +139,7 @@ $font:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Can
                     padding: 5px;
                     border-radius: 10px;
                     margin-left: 50px;
+                    margin-bottom: 10px;
                     box-shadow: 5px 2px 2px black;
                 }
                  .sendmessageuser2{
@@ -153,6 +156,7 @@ $font:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Can
                      padding: 5px;
                      border-radius: 10px;
                      margin-right: 50px;
+                     margin-bottom: 10px;
                      box-shadow: 5px 2px 2px black;
                  } 
                  .edit{
@@ -212,7 +216,7 @@ $font:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Can
             .buttonlogout{
                 display: flex;
                 justify-content: center;
-                margin-top: 0;
+                margin-top: 30px;
              
     
                 .logout{
@@ -240,8 +244,6 @@ $font:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Can
 }
 @media screen and (min-width: 1600px) and (max-width: 2000px) {
     .body{
-        height: 750px;
-
         .messages{
             width: 100%;
             height: 100%;
@@ -250,158 +252,182 @@ $font:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Can
 }
 @media screen and (min-width: 1101px) and (max-width: 1599px) {
     .body{
-        height: 700px;
-
-        .messages{
+        .container{
             width: 100%;
             height: 100%;
-        }
+            .messages{
+                width: 100%;
+              
+            }
+            .containersend{
+
+                .message{
+                    width: 90%;
+
+                }
+                .submit{
+                    width: 10%;
+
+                }
+                .buttonlogout{
+                    margin-top: 5px;
+                }
+        
+            }
+         }
     }
 }
 @media screen and (min-width: 800px) and (max-width: 1100px) {
-    .body{
-        height: 850px;
-
-        .messages{
+    .body
+        .container{
             width: 100%;
-            height: 80%;
-            padding-top: 5px;
-            padding-bottom: 5px;
-            border: none;  
-        
-            .containernames{
-                width: 15%;
-                height: auto;
+            height: 100%;
 
-                .users{
-                    font-size: 20px;
-                    width: 60%;
-                    height: 30px;
-                 }
-                .senduser{
-                    width: 96%;
-                    height: 40px;
+            .messages{
+                width: 100%;
+                padding-top: 5px;
+                padding-bottom: 5px;
+                border: none;
+
+            
+                .containernames{
+                    width: 15%;
+                    height: auto;
+
+                    .users{
+                        font-size: 20px;
+                        width: 70%;
+                        height: 30px;
+                     }
+                    .senduser{
+                        width: 96%;
+                        height: 40px;
+                    }
+                }
+                .avatar{
+                    width: 30px;
+                }
+
+                .textmessage{
+                    font-size: 15px;
+                }
+            
+                .sendmessageuser1{
+                    padding: 5px;
+                    margin-left: 20px;
+                
+                }
+
+                .sendmessageuser2{
+                    margin-right: 20px;
+                
                 }
             }
-            .avatar{
-                width: 30px;
+            .containersend{
+                border: none;
+                .message{
+                    width: 90%;
+                }
+                .submit{
+                    width: 10%;
+                }   
             }
-
-            .textmessage{
-                font-size: 15px;
-            }
-           
-            .sendmessageuser1{
-                padding: 5px;
-                margin-left: 20px;
-               
-            }
-
-            .sendmessageuser2{
-                margin-right: 20px;
-              
-            }
-        }
-        .containersend{
-         border: none;
-
-            .message{
-                width: 90%;
-            }
-            .submit{
-                width: 10%;
-            }   
-        }
     }
 }
 
+
 @media screen and (min-width: 501px) and (max-width: 799px) {
     .body{
-       height: 770px;
-
-        .messages{
-            border: none;  
+        .container{
             width: 100%;
             height: 100%;
-        
-            .containernames{
-                width: 25%;
-                margin-left: 0;
 
-                .users{
-                    font-size: 20px;
-                    width: 60%;
-                    height: 30px;
+            .messages{
+                border: none;  
+            
+                .containernames{
+                    width: 20%;
+                    margin-left: 0;
+                
+                    .users{
+                        width: 70%;
+                      font-size: 20px;
+                     }
+
+                    .senduser{
+                        width: 98%;
+                        height: 40px;
+
+                        .usermessage{
+                            display: none;
+                        }
+                    }
+                } 
+            }
+            .avatar{
+                width: 15px;
+                height:15px;
+                margin-left:5px;
+                margin-top: 0;
+                margin-bottom: 5px;
+                padding-top: 0;
+                box-shadow: none;
+            }
+
+            .textmessage{
+                font-size: 14px;
+                margin:0;
+                padding-left:3px;
+                padding-right: 3px;
+            }
+
+             .datetime{
+                 font-size: 10px;
+             }
+
+             .containermessages{
+                 width: 80%;
+                 height: 100%;
+
+                 .msg{
+                     width: 30%;
+                     height: 30px;
+                     font-size: 20px;
                  }
+             
+                 .sendmessageuser1{
+                    margin-left: 30px;
 
-                .senduser{
-                    width: 96%;
-                    height: 40px;
+                 }
+                 .sendmessageuser2{
+                     margin-right: 30px; 
+                 }
+             }
+            .containersend{
+                border: none;
+            
+                .message{
+                    width: 80%;
+
                 }
-            } 
-        }
-        .avatar{
-            width: 15px;
-            height:15px;
-            margin-left:5px;
-            margin-top: 0;
-            margin-bottom: 5px;
-            padding-top: 0;
-            box-shadow: none;
-        }
-
-        .textmessage{
-            font-size: 14px;
-            margin:0;
-            padding-left:3px;
-            padding-right: 3px;
-        }
-
-        .datetime{
-            font-size: 10px;
-        }
-
-        .containermessages{
-            width: 80%;
-            height: 100%;
-
-            .msg{
-                width: 30%;
-                height: 30px;
-                font-size: 20px;
+                .submit{
+                    height: 50px;
+                    width: 20%;
+                
+                }  
             }
-        
-            .sendmessageuser1{
-               margin-left: 30px;
-              
-            }
-            .sendmessageuser2{
-                margin-right: 30px; 
-            }
-        }
-        .containersend{
-          border: none;
-
-            .message{
-                width: 80%;
-            }
-            .submit{
-                height: 50px;
-                width: 15%;
-            }  
-        }
-    }  
+         }  
+    }
 }
 @media screen and (max-width: 500px) {
 
     .body{
-       height: 900px;
 
         .container{
             align-items: center;
-            justify-content: space-around;
-            height: 100%;
-            width: 100%;
+            justify-content: space-between;
+            height: 100vh;
+       
 
             .messages{
                 flex-direction: column;
@@ -411,39 +437,43 @@ $font:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Can
                 .containernames{
                     align-self: center;
                     align-items: center;
-                    height: 25%;
+                    height: 20%;
+                    width: 100%;
                     margin-left: 0px;
                     margin-right: 0px;
-                    margin-bottom: 20px;
+                    margin-bottom: 10px;
                     padding-left: 10px;
+                    padding-bottom: 20px;
                     box-shadow: 10px 5px 5px black;
-
+            
                         .users{
                             display: none;
-                            overflow: scroll;  
                          }
 
                         .senduser{
                             justify-content: center;
                             align-self: flex-start;
-                            width: 20%;
-                            height: 50px;
+                            width: 15%;
+                            height: 10vh;
                             margin-top: 20px;
                             padding-left: 0px;
                             margin-right: 10px;
                             padding-right: 15px;
+                           
                         }
                 }         
             
                 .avatar{
                     width: 15px;
                     height:15px;
-                    margin-bottom: 5px;
+                    margin-bottom: 15px;
                     box-shadow: none;
+                   
                 }
                 .textmessage{
                     font-size: 12px;
                     margin:0;
+                
                 }
                 .datetime{
                     font-size: 10px;
@@ -474,9 +504,9 @@ $font:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Can
                 }
             }
             .containersend{
-                width: 95%;
+                width: 100%;
                 height: 30px;
-                margin-top: -100px;
+                margin-top: -50px;
                 margin-bottom: 0px;
                 border: none;
                

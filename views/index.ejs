@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="css/style.css">
-    <title>Real Chat Time</title>
+    <title>Real Time Chat</title>
 </head>
 <body class="body"> 
     <div class="accueil">
@@ -13,7 +13,7 @@
            <img src="img/background4.jpg" alt="bulles de dialogue">
         </div>
         <div class="containerlogin">
-            <h1 class="title">Welcome to the Real Chat Time!</h1>
+            <h1 class="title">Welcome to the Real Time Chat!</h1>
 
             <% if (locals.errors) {%>
             <% errors.forEach((message) => { %>
@@ -22,7 +22,7 @@
             <% } %>
             <form action="/login" method="post" class="login">
                 <input class="usrnam" type="text" id="" name="login" placeholder="Username...">
-                <input class="mail" type="password" id="" name="password" placeholder="Passwordemail" placeholder="Email...">
+                <input class="password" type="password" id="" name="password" placeholder="Password..." >
                 <input class="send" type="submit" id="" value="LOGIN">
             </form>
 
