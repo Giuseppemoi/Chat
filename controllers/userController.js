@@ -22,6 +22,7 @@ exports.logout = (req, res) => {
 }
 
 exports.signup = (req, res) => {
+    console.log(req.body)
     let user = new User(req.body)
     user.register().then(() => {
         req.session.user = {userName: user.data.login}

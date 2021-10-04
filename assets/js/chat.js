@@ -21,7 +21,7 @@ class Chat {
         this.socket.emit('msg', {message: this.chatField.value})
         this.chatLog.insertAdjacentHTML('beforeend',`
         <div class="sendmessageuser1">
-            <p class="datetime" id="${new Date()}"></p>
+            <p class="datetime" id="">${new Date()}</p>
             <img class="avatar" id="" src="img/Avatar2.png" alt="avatar">
             <p class="textmessage" id="">${this.chatField.value}</p>
             <div class="edit">
@@ -40,9 +40,6 @@ class Chat {
         this.socket.on('welcome', data => {
             this.username = data.userName
             this.avatar = data.avatar
-            console.log(this.username)
-            console.log(data.userName)
-            this.displayUser(this.username)
         })
         this.socket.on('msg', (data) => {
             this.displayMessage(data)
@@ -50,9 +47,14 @@ class Chat {
         this.socket.on('output-messages', (data) => {
             this.displayOldMessages(data)
         })
-
+        this.socket.on('newUserConnected', (data) => {
+            this.displayUser(data)
+        })
+        this.socket.on('userDisconnected', (data) => {
+            let hzedgzegdez = document.querySelector('#containernames')
+            console.log(data)
+        })
     }
-
 
     displayOldMessages(data) {
         if (data[0].length) {
@@ -95,7 +97,7 @@ class Chat {
     displayMessage(data) {
         this.chatLog.insertAdjacentHTML('beforeend', `
         <div class="sendmessageuser2">
-            <p class="datetime" id="${new Date()}"></p>
+            <p class="datetime" id="">${new Date().getFullYear()}</p>
             <img class="avatar" id="" src="img/avatar1.png" alt="avatar">
             <p>${data.username}</p>
             <p class="textmessage" id="">${data.message}</p>
@@ -105,13 +107,15 @@ class Chat {
         this.chatLog.scrollTop = this.chatLog.scrollHeight
     }
 
-    displayUser(userName) {
-        this.userLog.insertAdjacentHTML('beforeend', `
-        <div class="senduser">
-            <img class="avatar" src="" alt="avatar">
-            <div class="usermessage">${userName}</div>
-        </div>
-        `)
+    displayUser(data) {
+        data.forEach(user => {
+            this.userLog.insertAdjacentHTML('beforeend', `
+            <div class="senduser" id="${user}">
+                <img class="avatar" src="" alt="avatar">
+                <div class="usermessage">${user}</div>
+            </div>
+            `)
+        })
     }
 }
 
