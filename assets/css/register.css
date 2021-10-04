@@ -1,5 +1,8 @@
 @media screen and (min-width: 501px) and (max-width: 799px) {
   .sign2 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
@@ -7,12 +10,20 @@
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    -ms-flex-line-pack: center;
+        align-content: center;
     background-color: white;
     background-size: 50%;
   }
 }
 
-.signup {
+span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+span .signup {
   text-align: center;
   color: white;
   background-color: #608899;
