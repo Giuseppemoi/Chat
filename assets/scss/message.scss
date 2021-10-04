@@ -1,0 +1,491 @@
+$colorBorder: #9B9B9B;
+$colorbackground: #608899;
+$colorDate: #9B9B9B;
+$font:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+*{
+    box-sizing: border-box;
+
+    .body{
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        margin: 0px;
+        font-family: $font;
+
+        .container{
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            height: 900px;
+            background-color: $colorDate;
+            padding:30px;
+           
+            .messages{
+                display: flex;
+                flex-direction: row;
+                align-self: center;
+                width: 100%;
+                height: 60%;
+                padding-top: 20px;
+                padding-bottom: 20px;
+                border: 2px solid $colorbackground;
+                border-radius: 10px;
+    
+                .containernames{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    width: 15%;
+                    height: 100%;
+                    background-color: $colorbackground;
+                    border: 2px solid $colorBorder;
+                    border-radius: 10px;
+                    margin-left: 20px;
+                    margin-right: 20px;
+                    box-shadow: 10px 5px 5px black;
+    
+                    .users{
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        color: white;
+                        border: 2px solid white;
+                        border-radius: 10px;
+                        width: 50%;
+                        height: 50px;
+                        box-shadow: 10px 5px 5px black;
+                     }
+                    .senduser{
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: space-between;
+                        align-items: center;
+                        width: 90%;
+                        height: 60px;
+                        border: 2px solid white;
+                        border-radius: 10px;
+                        background-color: white;
+                    }
+                }
+                .avatar{
+                    width: 30px;
+                    height: 30px;
+                    border: 1px solid black;
+                    border-radius: 50%;
+                    margin-left:10px;
+                    margin-top: 0;
+                    margin-bottom: 5px;
+                    padding-top: 0;
+                    box-shadow: 3px 1px 1px gray;
+                }
+                .textmessage{
+                    font-size: 14px;
+                    margin:0;
+                    padding-left:3px;
+                    padding-right: 3px;
+                }
+                .datetime{
+                    display: flex;
+                    align-self: flex-end;
+                    font-size: 9px;
+                    color: white;
+                    margin: 0;
+                    padding: 0;
+                }
+                .usermessage{
+                    color:$colorbackground;
+                    margin-right: 20px;
+                }
+                .containermessages{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    overflow: scroll;
+                    width: 80%;
+                    height: 100%;
+                    border: 2px solid $colorBorder;
+                    border-radius: 10px;
+                    background-color: white;
+                    box-shadow: 10px 5px 5px black;
+                    margin-bottom: 0;
+                    padding-bottom: 0;
+    
+                    .msg{
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        width: 30%;
+                        height: 50px;
+                        border: 2px solid $colorbackground;
+                        border-radius: 10px;
+                        color: $colorbackground;
+                        box-shadow: 10px 5px 5px black;
+                    }
+                }
+                .sendmessageuser1{
+                    display: flex;
+                    flex-direction: column;
+                    align-self: flex-start;
+                    overflow-wrap: break-word;
+                    max-width: 350px;
+                    min-width: 100px;
+                    max-height: 250px;
+                    background-color: $colorbackground;
+                    color: white;
+                    padding: 5px;
+                    border-radius: 10px;
+                    margin-left: 50px;
+                    box-shadow: 5px 2px 2px black;
+                }
+                 .sendmessageuser2{
+                     display: flex;
+                     flex-direction: column;
+                     align-self: flex-end;
+                     overflow-wrap: break-word;
+                     max-width: 250px;
+                     min-width: 100px;
+                     max-height: 250px;
+                     background-color: $colorBorder;
+                     color: white;
+                     margin-top: 20px;
+                     padding: 5px;
+                     border-radius: 10px;
+                     margin-right: 50px;
+                     box-shadow: 5px 2px 2px black;
+                 } 
+                 .edit{
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: flex-end;
+                    margin-top: 20px;
+                  
+
+                    .modified{
+                        display: flex;
+                        width: 20px;
+                        height: 20px;
+                    }
+                    .deleted{
+                        display: flex;
+                        width: 20px;
+                        height: 20px;
+                        
+                    }
+                }
+            }
+            .containersend {
+              display: flex;
+              flex-direction: row;
+              width: 100%;
+              height: 100px;
+              padding-top: 20px;
+              padding-bottom: 20px;
+              margin-top: 20px;
+              margin-bottom: 0;
+              border: 2px solid $colorbackground;
+              border-radius: 10px;
+            
+                .message{
+                    width: 93%;
+                    height: 50px;
+                    margin-right: 0px;
+                    margin-left: 20px;
+                    border-radius: 10px;
+     
+                }
+                .submit{
+                    height: 50px;
+                    width: 5%;
+                    background-color: $colorDate;
+                    border: 2px solid white;
+                    border-radius: 10px;
+                    color: white;
+                    font-weight: bold;
+                }
+                .submit:hover{
+                    background-color: white;
+                    color: $colorbackground;
+                }
+            }
+            .buttonlogout{
+                display: flex;
+                justify-content: center;
+                margin-top: 0;
+             
+    
+                .logout{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    align-self: center;
+                    background-color: $colorBorder;
+                    border: 2px solid white;
+                    color: white;
+                    font-weight: bold;
+                    width: 150px;
+                    height: 50px;
+                    margin-top: 0px;
+                    border-radius: 10px;
+                }
+                .logout:hover{
+                    background-color: white;
+                    color: $colorBorder;
+                }
+             }
+              
+        }
+    }
+}
+@media screen and (min-width: 1600px) and (max-width: 2000px) {
+    .body{
+        height: 750px;
+
+        .messages{
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
+@media screen and (min-width: 1101px) and (max-width: 1599px) {
+    .body{
+        height: 700px;
+
+        .messages{
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
+@media screen and (min-width: 800px) and (max-width: 1100px) {
+    .body{
+        height: 850px;
+
+        .messages{
+            width: 100%;
+            height: 80%;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            border: none;  
+        
+            .containernames{
+                width: 15%;
+                height: auto;
+
+                .users{
+                    font-size: 20px;
+                    width: 60%;
+                    height: 30px;
+                 }
+                .senduser{
+                    width: 96%;
+                    height: 40px;
+                }
+            }
+            .avatar{
+                width: 30px;
+            }
+
+            .textmessage{
+                font-size: 15px;
+            }
+           
+            .sendmessageuser1{
+                padding: 5px;
+                margin-left: 20px;
+               
+            }
+
+            .sendmessageuser2{
+                margin-right: 20px;
+              
+            }
+        }
+        .containersend{
+         border: none;
+
+            .message{
+                width: 90%;
+            }
+            .submit{
+                width: 10%;
+            }   
+        }
+    }
+}
+
+@media screen and (min-width: 501px) and (max-width: 799px) {
+    .body{
+       height: 770px;
+
+        .messages{
+            border: none;  
+            width: 100%;
+            height: 100%;
+        
+            .containernames{
+                width: 25%;
+                margin-left: 0;
+
+                .users{
+                    font-size: 20px;
+                    width: 60%;
+                    height: 30px;
+                 }
+
+                .senduser{
+                    width: 96%;
+                    height: 40px;
+                }
+            } 
+        }
+        .avatar{
+            width: 15px;
+            height:15px;
+            margin-left:5px;
+            margin-top: 0;
+            margin-bottom: 5px;
+            padding-top: 0;
+            box-shadow: none;
+        }
+
+        .textmessage{
+            font-size: 14px;
+            margin:0;
+            padding-left:3px;
+            padding-right: 3px;
+        }
+
+        .datetime{
+            font-size: 10px;
+        }
+
+        .containermessages{
+            width: 80%;
+            height: 100%;
+
+            .msg{
+                width: 30%;
+                height: 30px;
+                font-size: 20px;
+            }
+        
+            .sendmessageuser1{
+               margin-left: 30px;
+              
+            }
+            .sendmessageuser2{
+                margin-right: 30px; 
+            }
+        }
+        .containersend{
+          border: none;
+
+            .message{
+                width: 80%;
+            }
+            .submit{
+                height: 50px;
+                width: 15%;
+            }  
+        }
+    }  
+}
+@media screen and (max-width: 500px) {
+
+    .body{
+       height: 900px;
+
+        .container{
+            align-items: center;
+            justify-content: space-around;
+            height: 100%;
+            width: 100%;
+
+            .messages{
+                flex-direction: column;
+                justify-content: center;
+                border: none;
+
+                .containernames{
+                    align-self: center;
+                    align-items: center;
+                    height: 25%;
+                    margin-left: 0px;
+                    margin-right: 0px;
+                    margin-bottom: 20px;
+                    padding-left: 10px;
+                    box-shadow: 10px 5px 5px black;
+
+                        .users{
+                            display: none;
+                            overflow: scroll;  
+                         }
+
+                        .senduser{
+                            justify-content: center;
+                            align-self: flex-start;
+                            width: 20%;
+                            height: 50px;
+                            margin-top: 20px;
+                            padding-left: 0px;
+                            margin-right: 10px;
+                            padding-right: 15px;
+                        }
+                }         
+            
+                .avatar{
+                    width: 15px;
+                    height:15px;
+                    margin-bottom: 5px;
+                    box-shadow: none;
+                }
+                .textmessage{
+                    font-size: 12px;
+                    margin:0;
+                }
+                .datetime{
+                    font-size: 10px;
+                }
+                .usermessage{
+                    display: none;
+                } 
+    
+                .containermessages{
+                    box-shadow: 10px 5px 5px black;
+                    width: 100%;
+                    height: 700px;
+                  
+                
+                    .msg{
+                        display: none;
+                    }
+                    .sendmessageuser1{
+                        margin-left: 20px;
+                        margin-top: 20px;
+                        box-shadow: 10px 5px 5px black;
+                    }
+                    .sendmessageuser2{
+                         margin-top: 20px;
+                         margin-right: 50px;
+                         box-shadow: 10px 5px 5px black;
+                    }
+                }
+            }
+            .containersend{
+                width: 95%;
+                height: 30px;
+                margin-top: -100px;
+                margin-bottom: 0px;
+                border: none;
+               
+            
+                .submit{
+                    width: 30%;
+                }
+            }
+        }
+    }
+}
+    

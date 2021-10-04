@@ -1,41 +1,10 @@
 
- $colorBorder: #9B9B9B;
- $colorbackground: #608899;
- $colorDate: #9B9B9B;
- $font:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-.signup {
-    text-align: center;
-    background-color: white;
-    margin-left: 500px;
-    margin-right: 500px;
-    max-width: 100%;
-}
-
-.titre {
-    text-align: center;
  
-}
-h1 {
-    color: white;
-    text-align: center;
-}
-
-.signin {
-    background-color: #608899;
-    border-radius: 20ch;
-    margin-top: 10px;
-    color: white;
-    }
-body {
-    
-    background-color: $colorbackground;
-}
-
-.name {
-    padding-top: 100px;
-
-}
-
+$colorBorder: #9B9B9B; 
+$colorbackground: #608899; 
+$colorDate: #9B9B9B; 
+$font:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+//----------------------------------------------------------------------
 *{
     box-sizing: border-box;
 
@@ -43,360 +12,367 @@ body {
     display: flex;
     justify-content: center;
     margin: 0px;
-    font-family: $font;
-  
-.accueil{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    width: auto;
-    height: 950px;
-    border: 2px solid $colorBorder;
-    margin: 0;
-    padding: 0;
-    
-.containerimage{
-    display: flex;
-    width: 30%;
-    opacity: 0.5;
-    background-color: $colorbackground;
- img{
-    width: 100%;
- }
-}
-.containerlogin{
-    display: flex;
-    flex-direction: column;
-    justify-content: start;
-    align-items: center;
-    width: 70%;
-    background-color: $colorbackground;
+    font: $font;
     
   
-.title{
-    display: flex;
-    font-size: 60px;
-    margin-top: 250px;
-    margin-bottom: 50px;
-    color: white;
-}
-.login{
-    display: flex;
-    margin-bottom: 80px;
-    margin-top: 50px;
-
-.usrnam{
-    display: flex;
-    width: 200px;
-    height: 40px;
-    border-radius: 10px;
-    margin-right: 30px;
-
-}
-.mail{
-    display: flex;
-    width: 200px;
-    border-radius: 10px;
-    margin-right: 200px;
-}
-.send{
-    display: flex;
-    justify-content: center;
-    width: 100px;
-    border: 2px solid white;
-    border-radius: 10px;
-    background-color: $colorbackground;
-    color: white;
-    font-weight: bold;
-    font-family: $font;
-}
-
-.send:hover{
-    background-color: white;
-    color: $colorbackground;
-}
-}
-}
-.register{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    margin-top: 100px;
-
-.member{
-    display: flex;
-    justify-content: center;
-    width: 300px;
-    font-size: 30px;
-    margin-right: 40px;
-    color: white;
- 
-}
-
-.button{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100px;
-    height: 40px;
-    border: 2px solid white;
-    border-radius: 10px;
-    margin-top: 25px;
-    text-decoration: none;
-    color: white;
-    font-weight: bold;
-
-}
-.button:hover{
-    background-color: white;
-    color: $colorbackground;
-}
-}
-}
-}
-}
-.container{
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    height: 100%;
-    background-color: $colorDate;
-    padding: 20px;
-
-.messages{
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    height: 100%;
-    padding-top: 40px;
-    padding-bottom: 40px;
-    border: 2px solid $colorbackground;
-    border-radius: 10px;
-
-
-.containernames{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 15%;
-    height: 700px;
-    background-color: $colorbackground;
-    border: 2px solid $colorBorder;
-    border-radius: 10px;
-    margin-left: 20px;
-    margin-right: 20px;
-    box-shadow: 10px 5px 5px black;
-.users{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    border: 2px solid white;
-    border-radius: 10px;
-    width: 150px;
-    height: 50px;
- }
- .senduser{
-     display: flex;
-     flex-direction: row;
-     justify-content: space-between;
-     align-items: center;
-     width: 250px;
-     height: 60px;
-     border: 2px solid white;
-     border-radius: 10px;
-     background-color: white;
- }
-}
-.avatar{
-    width: 50px;
-    border-radius: 50%;
-    margin-left:20px;
-}
-.usermessage{
-    color:$colorbackground;
-    margin-right: 20px;
-}
-.containermessages{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 80%;
-    height: 700px;
-    border: 2px solid $colorBorder;
-    border-radius: 10px;
-    background-color: white;
-    box-shadow: 10px 5px 5px black;
-
-.msg{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 150px;
-    height: 50px;
-    border: 2px solid $colorbackground;
-    border-radius: 10px;
-    color: $colorbackground;
-}
-}
-.sendmessageuser1{
-    display: flex;
-    flex-direction: column;
-    align-self: flex-start;
-    max-width: 250px;
-    max-height: 250px;
-    background-color: $colorbackground;
-    color: white;
-    padding: 20px;
-    border-radius: 10px;
-    margin-left: 50px;
-
-}
-.sendmessageuser2{
-    display: flex;
-    flex-direction: column;
-    align-self: flex-end;
-    white-space: normal;
-    max-width: auto;
-    max-height: 250px;
-    background-color: $colorBorder;
-    color: white;
-    margin-top: 20px;
-    padding: 20px;
-    border-radius: 10px;
-    margin-right: 50px;
-}
-}
-}
-.containersend{
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    height: 200px;
-    background-color: $colorBorder;
-    padding-top: 40px;
- 
-
-.message{
-    width: 93%;
-    height: 50px;
-    margin-right: 0px;
-    margin-left: 20px;
-    border-radius: 10px;
+        .accueil{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            width: 100%;
+            height: 100%;
+            border: 2px solid $colorBorder;
+            margin: 0;
+            padding: 0;
     
-}
-.submit{
-    height: 50px;
-    width: 60px;
-    background-color: $colorDate;
-    border: 2px solid white;
-    border-radius: 10px;
-    color: white;
-    font-weight: bold;
-}
-.submit:hover{
-    background-color: white;
-    color: $colorbackground;
-}
-}
+            .containerimage{
+                display: flex;
+                width: 30%;
+                opacity: 0.5;
+                background-color: $colorbackground;
 
-
-   
-@media screen and (max-width: 1100px) {
-    .body{
-        display: flex;
-        justify-content: center;
-        align-content: center;
-        align-items: center;
+                img{
+                   width: 100%;
+                   height: 100%;
+            
+                }
+            }
+            .containerlogin{
+                display: flex;
+                flex-direction: column;
+                justify-content: start;
+                align-items: center;
+                width: 70%;
+                background-color: $colorbackground;
     
-    .accueil{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        background-color: $colorbackground;
-        margin-left: 100px;
   
-       
-      
-    .containerimage{
-        position: absolute;
-        left: -800em;
-        background-color: none;
-        width: 0%;
-    
-    img{
-        display: none;
-        opacity: 0;
-        background-color: $colorbackground;
-        width: 0%;
-    }
-    }
-    .containerlogin{
-        display: flex;
-        flex-direction: column;
-        align-content: center;
-        margin: 0;
-        
-    
-    .title{
-        font-size: 50px;
-        text-align: center;
-        margin-top: 20px;
-        margin-bottom: 20px;
-    }
-    .login{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: auto;
-    
-    .usrnam{
-       height: 50px;
-       margin-top: 10px;
-      
+                .title{
+                    display: flex;
+                    font-size: 60px;
+                    margin-top: 250px;
+                    margin-bottom: 50px;
+                    color: white;
+                }
+                .login{
+                    display: flex;
+                    margin-bottom: 80px;
+                    margin-top: 50px;
 
-    }
-    .mail{
-        height: 50px;
-        margin-top: 10px;
-        margin-left: 170px;
-        
-    }
-    .send{
-        height: 50px;
-        margin-top: 10px;
-        margin-right: 30px;
-        
-    }
-    }
-    .register{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        height: auto;
-        flex-direction: column;
-        margin-top: 30px;
-        margin-bottom: 50px;
+                    .usrnam{
+                        display: flex;
+                        width: 200px;
+                        height: 40px;
+                        border-radius: 10px;
+                        margin-right: 30px;
+                    
+                    }
+                    .mail{
+                        display: flex;
+                        width: 200px;
+                        border-radius: 10px;
+                        margin-right: 200px;
+                    }
+                    .send{
+                        display: flex;
+                        justify-content: center;
+                        width: 100px;
+                        border: 2px solid white;
+                        border-radius: 10px;
+                        background-color: $colorbackground;
+                        color: white;
+                        font-weight: bold;
+                        font-family: $font;
+                    }
 
-        .member{
-            margin-left: 20px;
+                    .send:hover{
+                        background-color: white;
+                        color: $colorbackground;
+                    }
+                }
+            }
+                .register{
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+                    margin-top: 100px;
+                
+                    .member{
+                        display: flex;
+                        justify-content: center;
+                        width: 300px;
+                        font-size: 30px;
+                        margin-right: 40px;
+                        color: white;
+                    
+                    }
+
+                    .button{
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        width: 100px;
+                        height: 40px;
+                        border: 2px solid white;
+                        border-radius: 10px;
+                        margin-top: 25px;
+                        text-decoration: none;
+                        color: white;
+                        font-weight: bold;
+                    
+                    }
+                    .button:hover{
+                        background-color: white;
+                        color: $colorbackground;
+                    }
+                }
         }
     }
-    }
-    }
-    }
 }
-@media screen and (max-width: 500px){
+.error {
+    color: red;
+}
+@media screen and (min-width: 1600px) and (max-width: 2000px) {
     .body{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    }
-    .accueil{
-        width: 500px;
-    }
-    .title{
-        font-size: 10px;
+        height: 750px;
     }
 }
+ 
+@media screen and (min-width: 1101px) and (max-width: 1599px) {
+    .body{
+        height: 700px;
+    }
+}
+@media screen and (min-width: 800px) and (max-width: 1100px) {
+    .body{
+        height: 850px;
+        
+        .accueil{
+           
+            .containerimage{
+                position: absolute;
+                left: -800em;
+                background-color: $colorbackground;
+                width: 0%;
+            
+                img{
+                    display: none;
+                    background-color: $colorbackground;
+                    width: 0%;
+                }
+             }
+            .containerlogin{
+                display: flex;
+                flex-direction: column;
+                align-content: center;
+                margin: 0;
+        
+    
+                .title{
+                    font-size: 50px;
+                    text-align: center;
+                    margin-top: 20px;
+                    margin-bottom: 20px;
+                }
+                .login{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    width: auto;
+                
+                    .usrnam{
+                       height: 50px;
+                       margin-top: 10px;
+                    
+                    
+                    }
+                    .mail{
+                        height: 50px;
+                        margin-top: 10px;
+                        margin-left: 170px;
+
+                    }
+                    .send{
+                        height: 50px;
+                        margin-top: 10px;
+                        margin-right: 30px;
+
+                    }
+                }
+                .register{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    height: auto;
+                    margin-top: 30px;
+                    margin-bottom: 50px;
+                
+                    .member{
+                        margin-left: 20px;
+                    }
+                }
+            }
+        }
+    }   
+
+@media screen and (min-width: 501px) and (max-width: 799px) {
+    .body{
+       height: 770px;
+        
+        .accueil{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-self: center;
+            align-items: center;
+            background-color: $colorbackground;
+            margin-left: 100px;
+            width:150%;
+            height: 1000px;
+           
+  
+            .containerimage{
+                position: absolute;
+                left: -800em;
+                background-color: $colorbackground;
+                width: 0%;
+            
+                img{
+                    display: none;
+                    background-color: $colorbackground;
+                    width: 0%;
+                }
+             }
+            .containerlogin{
+                display: flex;
+                flex-direction: column;
+                align-content: center;
+                margin: 0;
+        
+    
+                .title{
+                    font-size: 50px;
+                    text-align: center;
+                    margin-top: 20px;
+                    margin-bottom: 20px;
+                }
+                .login{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    width: auto;
+                
+                    .usrnam{
+                       height: 50px;
+                       margin-top: 10px;
+                    }
+
+                    .mail{
+                        height: 50px;
+                        margin-top: 10px;
+                        margin-left: 170px;
+                    }
+                    .send{
+                        height: 50px;
+                        margin-top: 10px;
+                        margin-right: 30px;
+                    }
+                }
+                .register{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    height: auto;
+                    margin-top: 30px;
+                    margin-bottom: 50px;
+                
+                    .member{
+                        margin-left: 20px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .body{
+       height: 900px;
+    
+        .accueil{
+            display: flex;
+            align-self: center;
+            width: auto;
+            height: 760px;
+
+            .containerimage{
+                position: absolute;
+                left: -800em;
+                background-color: none;
+                width: 0%;
+            
+                img{
+                    display: none;
+                    opacity: 0;
+                    background-color: $colorbackground;
+                    width: 0%;
+                }
+             }
+            .containerlogin{
+                display: flex;
+                flex-direction: column;
+                align-content: center;
+                margin: 0;
+            
+                .title{
+                    font-size: 35px;
+                    overflow-wrap: break-word;
+                    text-align: center;
+                    margin-top: 20px;
+                    margin-bottom: 20px;
+                }
+                .login{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    width: auto;
+                
+                    .usrnam{
+                       height: 50px;
+                       margin-top: 10px;
+                    
+                    
+                    }
+                    .mail{
+                        height: 50px;
+                        margin-top: 10px;
+                        margin-left: 170px;
+
+                    }
+                    .send{
+                        height: 50px;
+                        margin-top: 10px;
+                        margin-right: 30px;
+
+                    }
+                }
+                .register{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    height: auto;
+                    margin-top: 30px;
+                    margin-bottom: 50px;
+                
+                    .member{
+                        margin-left: 20px;
+                        font-size: 20px;
+                    }
+                }
+            }
+        }
+    }
+}
+}
+            
+        
+    

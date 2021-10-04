@@ -1,33 +1,66 @@
 const express = require("express");
-let app = express();
-let http = require('http').Server(app);
-let io = require('socket.io')(http);
-const mongoose = require('mongoose');
-const bcrypt = require('bcrypt');
-const Msg = require('./assets/model/msgSchema');
-//const User = require('./assets/model/userSchema');
-const Users = [];
+const session = require('express-session');
+const MongoStore = require('connect-mongo')(session)
+const flash = require('connect-flash');
+const sanitizeHTML = require('sanitize-html');
+const app = express();
+
+const msgCollection = require ('./db').db().collection('msgs')
+
+
+let sessionOptions = session({
+    secret: "Real time chat app!",
+    store: new MongoStore({client: require('./db')}),
+    resave: false,
+    saveUninitialized: false,
+    cookie: { maxAge: 1000 * 60 * 60 * 24, httpOnly: true}
+})
+
+app.use(sessionOptions)
+app.use(flash())
+
+const Msg = require('./assets/model/msgSchema')
+// const User = require('./assets/model/userSchema')
+
+const router = require('./router')
+
+app.use(express.urlencoded({extended: false}))
+app.use(express.json())
+
+app.set('view engine', 'ejs')
+
 app.use(express.static('assets'));
 app.set('view-engine', 'ejs');
 app.use(express.urlencoded({ extended: false }));
 
-const URI = "mongodb+srv://admin:abmyn0ERpP7vIJeJ@chat.mmksw.mongodb.net/messages?retryWrites=true&w=majority"
+app.use('/', router)
 
-mongoose.connect(URI).then( () =>{
-    console.log('connected')
-})
+// io.on('connection', (socket) => {
+//     console.log('user connected');
+//
+//     Msg.find().then((res)=> {
+//         socket.emit('output-messages', res)
+//     })
+//
+//     socket.on('disconnect', () => {
+//         console.log('user disconnect');
+//     })
+//
+//     socket.on('chat message', (msg) => {
+//         const message = new Msg({msg, date: Date()})
+//         message.save().then(()=> {
+//             io.emit('chat message', msg);
+//         })
+//         console.log('message recu  : ' + msg);
+//     })
+// })
 
-app.get('/', (req, res) => {
-    res.render('index.ejs',{Msg : Msg})
-})
-app.get('/login', (req, res) => {
-    res.render('login.ejs')
-})
-app.post('/login', (req, res) => {
-    
-})
-app.get('/register', (req, res) => {
-    res.render('register.ejs')
+const server = require('http').createServer(app)
+
+const io = require('socket.io')(server)
+
+io.use(function (socket, next) {
+    sessionOptions(socket.request, socket.request.res, next)
 })
 app.post('/register', async (req, res) => {
     try {
@@ -48,27 +81,26 @@ app.post('/register', async (req, res) => {
 
 
 
-io.on('connection', (socket) => {
-    Msg.find().then(result => {
-        socket.emit('output-messages', result);
-    })
-    console.log('user connected');
-    Msg.find().then((res)=> {
-        socket.emit('output-messages', res)
-    })
-    socket.on('disconnect', () => {
-        console.log('user disconnect');
-    })
-    socket.on('chat message', (msg) => {
-        const message = new Msg({msg, date: Date()})
-        message.save().then(()=> {
-            io.emit('chat message', msg);
+io.on('connection', function(socket) {
+    // new user connected ?
+    if (socket.request.session.user) {
+
+        msgCollection.find().toArray(function(err, docs) {
+            //console.log(socket.request.session.user.userName)
+            socket.emit('output-messages', [docs, socket.request.session.user.userName])
         })
-        console.log('message recu  : ' + msg);
-    })
+
+        let user = socket.request.session.user
+
+        socket.emit('welcome', {username: user.userName, avatar: user.avatar})
+        socket.on('msg', function(data) {
+            const message = new Msg({username: user.userName, msg: sanitizeHTML(data.message, {allowedTags: [], allowedAttributes: {}}), date: new Date()})
+            msgCollection.insertOne(message).then(()=> {
+                socket.broadcast.emit('msg', {message: sanitizeHTML(data.message, {allowedTags: [], allowedAttributes: {}}), username: user.userName, avatar: user.avatar})
+            })
+            //socket.broadcast.emit('msg', {message: sanitizeHTML(data.message, {allowedTags: [], allowedAttributes: {}}), username: user.userName, avatar: user.avatar})
+        })
+    }
 })
 
-http.listen(3000, () => {
-
-    console.log('connected')
-})
+module.exports = server

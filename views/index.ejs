@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="css/style.css">
+
     <title>Messages</title>
 </head>
 <body class="body">
@@ -43,5 +44,36 @@
     </div>
     <script src="/socket.io/socket.io.js"></script>
     <script src="js/client.js"></script>
+
+    <title>Real Chat Time</title>
+</head>
+<body class="body"> 
+    <div class="accueil">
+        <div class="containerimage">
+           <img src="img/background4.jpg" alt="bulles de dialogue">
+        </div>
+        <div class="containerlogin">
+            <h1 class="title">Welcome to the Real Chat Time!</h1>
+
+            <% if (locals.errors) {%>
+            <% errors.forEach((message) => { %>
+                <div class="error"> <%= message %></div>
+            <% }) %>
+            <% } %>
+            <form action="/login" method="post" class="login">
+                <input class="usrnam" type="text" id="" name="login" placeholder="Username...">
+                <input class="mail" type="password" id="" name="password" placeholder="Passwordemail" placeholder="Email...">
+                <input class="send" type="submit" id="" value="LOGIN">
+            </form>
+
+            <div class="register">
+                <h2 class="member">Not a member yet?</h2>
+
+                <a href="/register" class="button">JOIN US</a>
+
+            </div>    
+        </div>  
+    </div> 
+>>>>>>> master
 </body>
 </html>
