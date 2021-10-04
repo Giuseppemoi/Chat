@@ -2,32 +2,51 @@ const express = require("express");
 let app = express();
 let http = require('http').Server(app);
 let io = require('socket.io')(http);
-const mongoose = require('mongoose')
-const Msg = require('./assets/model/msgSchema')
-const User = require('./assets/model/userSchema')
+const mongoose = require('mongoose');
+const bcrypt = require('bcrypt');
+const Msg = require('./assets/model/msgSchema');
+//const User = require('./assets/model/userSchema');
+const Users = [];
 app.use(express.static('assets'));
+app.set('view-engine', 'ejs');
+app.use(express.urlencoded({ extended: false }));
 
 const URI = "mongodb+srv://admin:abmyn0ERpP7vIJeJ@chat.mmksw.mongodb.net/messages?retryWrites=true&w=majority"
-// const user = new User({name: 'coucou', email: 'sdhfbjdhb', password: 'hdbzjehvbdjzhebd'})
-// user.save().then(()=> {
-//     console.log('user saved');
-//
-// })
+
 mongoose.connect(URI).then( () =>{
     console.log('connected')
 })
 
-app.get("/",(req , res) =>{
-    res.sendFile(__dirname + '/index.html')
+app.get('/', (req, res) => {
+    res.render('index.ejs',{Msg : Msg})
+})
+app.get('/login', (req, res) => {
+    res.render('login.ejs')
+})
+app.post('/login', (req, res) => {
+    
+})
+app.get('/register', (req, res) => {
+    res.render('register.ejs')
+})
+app.post('/register', async (req, res) => {
+    try {
+        const hashedPassword = await bcrypt.hash(req.body.password, 10)
+        Users.push({
+            id: Date.now().toString(),
+            username: req.body.username,
+            email: req.body.email,
+            password: hashedPassword
+           
+        })
+        res.redirect('/login')  
+    } catch {
+        res.redirect('/register')
+    }
+    console.log(Users)
 })
 
-app.get("/register",(req , res) =>{
-    res.sendFile(__dirname + '/register.html')
-})
 
-app.get("/chat",(req , res) =>{
-    res.sendFile(__dirname + '/messages.html')
-})
 
 io.on('connection', (socket) => {
     Msg.find().then(result => {
