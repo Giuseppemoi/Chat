@@ -16,7 +16,8 @@ User.prototype.cleanUp = function () {
     this.data = {
         login: this.data.login.trim().toLowerCase(),
         mail: this.data.mail.trim().toLowerCase(),
-        password: this.data.password
+        password: this.data.password,
+        avatar: this.data.avatar
     }
 }
 
@@ -51,7 +52,7 @@ User.prototype.login = function() {
         this.cleanUp()
         usersCollection.findOne({ login: this.data.login}).then((attemptedUser) => {
             if (attemptedUser && bcrypt.compareSync(this.data.password, attemptedUser.password)) {
-                resolve("congrats!!!!")
+                resolve(attemptedUser.avatar)
             } else {
                 reject('invalid username/password')
             }

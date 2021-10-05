@@ -21,7 +21,6 @@ app.use(sessionOptions)
 app.use(flash())
 
 const Msg = require('./assets/model/msgSchema')
-// const User = require('./assets/model/userSchema')
 
 const router = require('./router')
 
@@ -33,26 +32,6 @@ app.set('view engine', 'ejs')
 app.use(express.static('assets'));
 
 app.use('/', router)
-
-// io.on('connection', (socket) => {
-//     console.log('user connected');
-//
-//     Msg.find().then((res)=> {
-//         socket.emit('output-messages', res)
-//     })
-//
-//     socket.on('disconnect', () => {
-//         console.log('user disconnect');
-//     })
-//
-//     socket.on('chat message', (msg) => {
-//         const message = new Msg({msg, date: Date()})
-//         message.save().then(()=> {
-//             io.emit('chat message', msg);
-//         })
-//         console.log('message recu  : ' + msg);
-//     })
-// })
 
 const server = require('http').createServer(app)
 
@@ -68,11 +47,11 @@ io.on('connection', function(socket) {
         if (userArray.indexOf(socket.request.session.user.userName) === -1) {
             userArray.push(socket.request.session.user.userName)
         }
-        io.emit('newUserConnected', userArray)
+        io.emit('newUserConnected', [userArray, socket.request.session.user])
 
         msgCollection.find().toArray(function(err, docs) {
             //console.log(socket.request.session.user.userName)
-            socket.emit('output-messages', [docs, socket.request.session.user.userName])
+            socket.emit('output-messages', [docs, socket.request.session.user.userName, socket.request.session.user.avatar])
         })
 
         let user = socket.request.session.user

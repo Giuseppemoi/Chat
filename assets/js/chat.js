@@ -63,7 +63,7 @@ class Chat {
                     this.chatLog.insertAdjacentHTML('beforeend', `
                     <div class="sendmessageuser1">
                         <p class="datetime" id="">${message.date}</p>
-                        <img class="avatar" id="" src="img/avatar1.png" alt="avatar">
+                        <img class="avatar" id="" src="img/avatar${data[2]}.png" alt="avatar">
                         <p class="textmessage" id="">${message.msg}</p>
                         ${this.editButton(message.username, data[1])}
                     </div>
@@ -72,7 +72,7 @@ class Chat {
                     this.chatLog.insertAdjacentHTML('beforeend', `
                     <div class="sendmessageuser2">
                         <p class="datetime" id="">${message.date}</p>
-                        <img class="avatar" id="" src="img/avatar1.png" alt="avatar">
+                        <img class="avatar" id="" src="" alt="avatar">
                         <p>${message.username}</p>
                         <p class="textmessage" id="">${message.msg}</p>
                         ${this.editButton(message.username, data[1])}
@@ -108,10 +108,11 @@ class Chat {
     }
 
     displayUser(data) {
-        data.forEach(user => {
+        //console.log(data[1])
+        data[0].forEach(user => {
             this.userLog.insertAdjacentHTML('beforeend', `
             <div class="senduser" id="${user}">
-                <img class="avatar" src="" alt="avatar">
+                <img class="avatar" src="img/avatar${data[1].avatar}.png" alt="avatar">
                 <div class="usermessage">${user}</div>
             </div>
             `)
