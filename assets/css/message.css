@@ -107,7 +107,7 @@
   height: 60px;
   border: 2px solid white;
   border-radius: 10px;
-  background-color: white;
+  background-color: #dad6d6;
   margin-bottom: 10px;
 }
 
@@ -182,7 +182,7 @@
   width: 80%;
   border: 2px solid #9B9B9B;
   border-radius: 10px;
-  background-color: white;
+  background-color: grey;
   -webkit-box-shadow: 10px 5px 5px black;
           box-shadow: 10px 5px 5px black;
   margin-bottom: 0;
