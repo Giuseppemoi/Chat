@@ -120,18 +120,6 @@ $font:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Can
                     box-shadow: 10px 5px 5px black;
                     margin-bottom: 0;
                     padding-bottom: 0;
-    
-                    .msg{
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
-                        width: 30%;
-                        height: 50px;
-                        border: 2px solid $colorbackground;
-                        border-radius: 10px;
-                        color: $colorbackground;
-                        box-shadow: 10px 5px 5px black;
-                    }
                 }
                 .sendmessageuser1{
                     display: flex;
@@ -330,7 +318,8 @@ $font:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Can
             height: 100%;
 
             .messages{
-                border: none;  
+                border: none; 
+                height: 100vh; 
             
                 .containernames{
                     width: 20%;
@@ -370,11 +359,6 @@ $font:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Can
                  width: 80%;
                  height: 100%;
 
-                 .msg{
-                     width: 30%;
-                     height: 30px;
-                     font-size: 20px;
-                 }
                  .sendmessageuser1{
                     margin-left: 30px;
                  }
@@ -404,6 +388,7 @@ $font:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Can
             align-items: center;
             justify-content: space-between;
             height: 100vh;
+            padding-top: 5px;
        
             .messages{
                 flex-direction: column;
@@ -413,7 +398,7 @@ $font:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Can
                 .containernames{
                     align-self: center;
                     align-items: center;
-                    height: 20%;
+                    height: 15%;
                     width: 100%;
                     margin-left: 0px;
                     margin-right: 0px;
@@ -437,8 +422,9 @@ $font:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Can
                         }
                 }         
                 .avatar{
-                    margin-bottom: 15px;
+                    margin-bottom: 0px;
                     box-shadow: none;
+
                    
                 }
                 .textmessage{
@@ -456,9 +442,6 @@ $font:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Can
                     width: 100%;
                     height: 700px;
                 
-                    .msg{
-                        display: none;
-                    }
                     .sendmessageuser1{
                         margin-left: 20px;
                         margin-top: 20px;
