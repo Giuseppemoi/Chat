@@ -14,6 +14,8 @@ $font:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Can
     justify-content: center;
     margin: 0px;
     font-family: $font;
+  
+    
     
         .accueil{
             display: flex;
@@ -30,7 +32,7 @@ $font:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Can
 
                 img{
                    width: 100%;
-                   height: 100%;
+                   //height: 100%;
             
                 }
             }
