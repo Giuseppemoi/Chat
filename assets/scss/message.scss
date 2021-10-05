@@ -82,7 +82,7 @@ $font:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Can
                     box-shadow: 3px 1px 1px gray;
                 }
                 .textmessage{
-                    font-size: 20px;
+                    font-size: 14px;
                     margin-left:5px;
                     margin-top: 10px;
                     margin-bottom: 5px;
@@ -128,8 +128,8 @@ $font:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Can
                     align-self: flex-start;
                     overflow-wrap: break-word;
                     max-width: 350px;
-                    min-width: 200px;
-                    max-height: 250px;
+                    min-width: auto;
+                    max-height: auto;
                     background-color: $colorbackground;
                     color: white;
                     padding: 5px;
@@ -145,8 +145,8 @@ $font:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Can
                      align-self: flex-end;
                      overflow-wrap: break-word;
                      max-width: 250px;
-                     min-width: 200px;
-                     max-height: 250px;
+                     min-width: auto;
+                     max-height: auto;
                      background-color: $colorBorder;
                      color: white;
                      margin-top: 5px;
