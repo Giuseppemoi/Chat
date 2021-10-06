@@ -26,3 +26,10 @@ At the end of this challenge you should be able to:
 * "register"
 * "login"/"logout"
 * "messages"
+
+### Team
+--------
+* Giuseppe
+* Evrard
+* Martin
+* Julie
