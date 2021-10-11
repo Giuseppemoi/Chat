@@ -5,6 +5,8 @@
 ---------------
 The Real Chat Time is a project to create a Chat in Node.js, Express.js, Socket.io
 
+https://real-time-chat-2021.herokuapp.com/chat
+
 ### Mission
 -----------
 At the end of this challenge you should be able to:
